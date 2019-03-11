@@ -181,10 +181,10 @@ Amm.AspNetCore项目（方便自用）旨在于快速构建.NETCore项目。可�
   },
   "MongoDb": {
     "IsEnabledAuthorization": false,
-    "DataBase": "jwellface",
-    "UserName": "jwellface",
-    "Password": "jwellface123!##",
-    "ConnectionString": "127.0.0.1:27017"
+    "DataBase": "xxxx",
+    "UserName": "xxx",
+    "Password": "xxxxx",
+    "ConnectionString": "xxxxxx:27017"
   },
   "ConnectionStrings": {
     "SqlServerConnection": "server=xxx;database=xxx;uid=xxx;pwd=xxxxx;multipleactiveresultsets=true;pooling=true;min pool size=0;max pool size=10000",
