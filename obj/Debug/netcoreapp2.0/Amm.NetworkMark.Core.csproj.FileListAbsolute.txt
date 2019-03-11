@@ -1,0 +1,15 @@
+D:\Amm.NetworkMark\src\Amm.NetworkMark.Core\bin\Debug\netcoreapp2.0\Amm.NetworkMark.Core.deps.json
+D:\Amm.NetworkMark\src\Amm.NetworkMark.Core\bin\Debug\netcoreapp2.0\Amm.NetworkMark.Core.dll
+D:\Amm.NetworkMark\src\Amm.NetworkMark.Core\bin\Debug\netcoreapp2.0\Amm.NetworkMark.Core.pdb
+D:\Amm.NetworkMark\src\Amm.NetworkMark.Core\obj\Debug\netcoreapp2.0\Amm.NetworkMark.Core.csprojAssemblyReference.cache
+D:\Amm.NetworkMark\src\Amm.NetworkMark.Core\obj\Debug\netcoreapp2.0\Amm.NetworkMark.Core.csproj.CoreCompileInputs.cache
+D:\Amm.NetworkMark\src\Amm.NetworkMark.Core\obj\Debug\netcoreapp2.0\Amm.NetworkMark.Core.AssemblyInfoInputs.cache
+D:\Amm.NetworkMark\src\Amm.NetworkMark.Core\obj\Debug\netcoreapp2.0\Amm.NetworkMark.Core.AssemblyInfo.cs
+D:\Amm.NetworkMark\src\Amm.NetworkMark.Core\obj\Debug\netcoreapp2.0\Amm.NetworkMark.Core.dll
+D:\Amm.NetworkMark\src\Amm.NetworkMark.Core\obj\Debug\netcoreapp2.0\Amm.NetworkMark.Core.pdb
+D:\Amm.NetworkMark\src\Amm.NetworkMark.Core\bin\Debug\netcoreapp2.0\Amm.NetworkMark.Core.xml
+D:\Amm.NetworkMark\src\Amm.NetworkMark.Core\obj\Debug\netcoreapp2.0\Amm.NetworkMark.Core.Resources.resources
+D:\Amm.NetworkMark\src\Amm.NetworkMark.Core\obj\Debug\netcoreapp2.0\Amm.NetworkMark.Core.csproj.GenerateResource.cache
+D:\Amm.NetworkMark\src\Amm.NetworkMark.Core\obj\Debug\netcoreapp2.0\Amm.NetworkMark.Core.csproj.CopyComplete
+D:\Amm.NetworkMark\src\Amm.NetworkMark.Core\bin\Debug\netcoreapp2.0\Microsoft.AspNetCore.Authentication.dll
+D:\Amm.NetworkMark\src\Amm.NetworkMark.Core\bin\Debug\netcoreapp2.0\Microsoft.AspNetCore.Authentication.xml

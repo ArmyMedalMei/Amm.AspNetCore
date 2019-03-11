@@ -1,0 +1,9 @@
+D:\Amm.NetworkMark\src\Amm.NetworkMark.Core\bin\Release\netcoreapp2.0\Amm.NetworkMark.Core.deps.json
+D:\Amm.NetworkMark\src\Amm.NetworkMark.Core\bin\Release\netcoreapp2.0\Amm.NetworkMark.Core.dll
+D:\Amm.NetworkMark\src\Amm.NetworkMark.Core\bin\Release\netcoreapp2.0\Amm.NetworkMark.Core.pdb
+D:\Amm.NetworkMark\src\Amm.NetworkMark.Core\obj\Release\netcoreapp2.0\Amm.NetworkMark.Core.csprojAssemblyReference.cache
+D:\Amm.NetworkMark\src\Amm.NetworkMark.Core\obj\Release\netcoreapp2.0\Amm.NetworkMark.Core.csproj.CoreCompileInputs.cache
+D:\Amm.NetworkMark\src\Amm.NetworkMark.Core\obj\Release\netcoreapp2.0\Amm.NetworkMark.Core.AssemblyInfoInputs.cache
+D:\Amm.NetworkMark\src\Amm.NetworkMark.Core\obj\Release\netcoreapp2.0\Amm.NetworkMark.Core.AssemblyInfo.cs
+D:\Amm.NetworkMark\src\Amm.NetworkMark.Core\obj\Release\netcoreapp2.0\Amm.NetworkMark.Core.dll
+D:\Amm.NetworkMark\src\Amm.NetworkMark.Core\obj\Release\netcoreapp2.0\Amm.NetworkMark.Core.pdb

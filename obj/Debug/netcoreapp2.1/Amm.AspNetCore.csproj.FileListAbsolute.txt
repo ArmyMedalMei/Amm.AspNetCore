@@ -1,0 +1,15 @@
+D:\Amm.NetworkMark\src\Amm.AspNetCore\bin\Debug\netcoreapp2.1\Amm.AspNetCore.deps.json
+D:\Amm.NetworkMark\src\Amm.AspNetCore\bin\Debug\netcoreapp2.1\Amm.AspNetCore.dll
+D:\Amm.NetworkMark\src\Amm.AspNetCore\bin\Debug\netcoreapp2.1\Amm.AspNetCore.pdb
+D:\Amm.NetworkMark\src\Amm.AspNetCore\bin\Debug\netcoreapp2.1\Amm.AspNetCore.xml
+D:\Amm.NetworkMark\src\Amm.AspNetCore\obj\Debug\netcoreapp2.1\Amm.AspNetCore.csprojAssemblyReference.cache
+D:\Amm.NetworkMark\src\Amm.AspNetCore\obj\Debug\netcoreapp2.1\Amm.AspNetCore.Resources.resources
+D:\Amm.NetworkMark\src\Amm.AspNetCore\obj\Debug\netcoreapp2.1\Amm.AspNetCore.csproj.GenerateResource.cache
+D:\Amm.NetworkMark\src\Amm.AspNetCore\obj\Debug\netcoreapp2.1\Amm.AspNetCore.csproj.CoreCompileInputs.cache
+D:\Amm.NetworkMark\src\Amm.AspNetCore\obj\Debug\netcoreapp2.1\Amm.AspNetCore.AssemblyInfoInputs.cache
+D:\Amm.NetworkMark\src\Amm.AspNetCore\obj\Debug\netcoreapp2.1\Amm.AspNetCore.AssemblyInfo.cs
+D:\Amm.NetworkMark\src\Amm.AspNetCore\obj\Debug\netcoreapp2.1\Amm.AspNetCore.csproj.CopyComplete
+D:\Amm.NetworkMark\src\Amm.AspNetCore\obj\Debug\netcoreapp2.1\Amm.AspNetCore.dll
+D:\Amm.NetworkMark\src\Amm.AspNetCore\obj\Debug\netcoreapp2.1\Amm.AspNetCore.pdb
+D:\Amm.NetworkMark\src\Amm.AspNetCore\bin\Debug\netcoreapp2.1\Microsoft.IdentityModel.Tokens.dll
+D:\Amm.NetworkMark\src\Amm.AspNetCore\bin\Debug\netcoreapp2.1\Microsoft.IdentityModel.Tokens.xml

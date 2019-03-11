@@ -1,0 +1,3114 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Amm.AspNetCore</name>
+    </assembly>
+    <members>
+        <member name="T:Amm.AspNetCore.Attributes.FileExtAttribute">
+            <summary>
+             文件拓展名验证属性标签
+            </summary>
+        </member>
+        <member name="P:Amm.AspNetCore.Attributes.FileExtAttribute.Extensions">
+            <summary>
+                文件拓展名
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.Attributes.FileExtAttribute.IsValid(System.Object)">
+            <summary>
+             重写验证
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Amm.AspNetCore.Attributes.FileRequiredAttribute">
+            <summary>
+              未上传文件验证
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.Attributes.FileRequiredAttribute.IsValid(System.Object)">
+            <summary>
+             重写验证
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Amm.AspNetCore.Attributes.FileSizeAttribute">
+            <summary>
+              文件大小验证属性标签
+            </summary>
+        </member>
+        <member name="P:Amm.AspNetCore.Attributes.FileSizeAttribute.FileSize">
+            <summary>
+            文件大小
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.Attributes.FileSizeAttribute.IsValid(System.Object)">
+            <summary>
+             重写验证
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Amm.AspNetCore.Attributes.StringLenghtRangeAttribute">
+            <summary>
+             字符串长度属性标签
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.Attributes.StringLenghtRangeAttribute.#ctor(System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="minNum"></param>
+            <param name="maxNum"></param>
+        </member>
+        <member name="P:Amm.AspNetCore.Attributes.StringLenghtRangeAttribute.MinNum">
+            <summary>
+             最小长度
+            </summary>
+        </member>
+        <member name="P:Amm.AspNetCore.Attributes.StringLenghtRangeAttribute.MaxNum">
+            <summary>
+             最大长度
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.Attributes.StringLenghtRangeAttribute.IsValid(System.Object)">
+            <summary>
+             重写验证
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Amm.AspNetCore.AutoMappers.AutoMapAttribute">
+            <summary>
+             自动映射标签属性
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.AutoMappers.AutoMapAttribute.#ctor(System.Type[])">
+            <summary>
+            初始化一个<see cref="T:Amm.AspNetCore.AutoMappers.AutoMapAttribute"/>类型的新实例
+            </summary>
+        </member>
+        <member name="P:Amm.AspNetCore.AutoMappers.AutoMapAttribute.SourceTypes">
+            <summary>
+            源类型
+            </summary>
+        </member>
+        <member name="T:Amm.AspNetCore.AutoMappers.AutoMapAttributeFinder">
+            <summary>
+              属性注入
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.AutoMappers.AutoMapAttributeFinder.#ctor(Amm.AspNetCore.TypeFinders.ITypeFinder)">
+            <summary>
+            属性注入
+            </summary>
+            <param name="finder"></param>
+        </member>
+        <member name="T:Amm.AspNetCore.AutoMappers.AutoMapperExtension">
+            <summary>
+                automaper拓展类
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.AutoMappers.AutoMapperExtension.AddAutoMapper(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+                添加自动实体映射
+            </summary>
+            <param name="services"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amm.AspNetCore.AutoMappers.AutoMapperExtension.UserAutoMapper(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+                使用自动实体映射
+            </summary>
+        </member>
+        <member name="T:Amm.AspNetCore.AutoMappers.IAutoMapAttributeFinder">
+            <summary>
+              自动注入属性查找器接口
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.AutoMappers.IAutoMapAttributeFinder.FindAttributeClassItems">
+            <summary>
+            FindAllItems
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Amm.AspNetCore.AutoMappers.IAutoMapperConfiguration">
+            <summary>
+            IAutoMapperConfiguration
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.AutoMappers.IAutoMapperConfiguration.CreateMaps(AutoMapper.IMapperConfigurationExpression)">
+            <summary>
+            创建对象映射
+            </summary>
+            <param name="mapper">映射配置表达</param>
+        </member>
+        <member name="T:Amm.AspNetCore.AutoMappers.IMapTuple">
+            <summary>
+            定义对象映射源与目标配对
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.AutoMappers.IMapTuple.CreateMap">
+            <summary>
+            执行对象映射构造
+            </summary>
+        </member>
+        <member name="T:Amm.AspNetCore.AutoMappers.MapperExtensions">
+            <summary>
+                对象映射扩展操作
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.AutoMappers.MapperExtensions.MapTo``1(System.Object)">
+            <summary>
+                将对象映射为指定类型
+            </summary>
+            <typeparam name="TTarget">要映射的目标类型</typeparam>
+            <param name="source">源对象</param>
+            <returns>目标类型的对象</returns>
+        </member>
+        <member name="M:Amm.AspNetCore.AutoMappers.MapperExtensions.MapTo``2(``0,``1)">
+            <summary>
+                使用源类型的对象更新目标类型的对象
+            </summary>
+            <typeparam name="TSource">源类型</typeparam>
+            <typeparam name="TTarget">目标类型</typeparam>
+            <param name="source">源对象</param>
+            <param name="target">待更新的目标对象</param>
+            <returns>更新后的目标类型对象</returns>
+        </member>
+        <member name="T:Amm.AspNetCore.AutoMappers.MapTupleProfile">
+            <summary>
+              映射集合组合列表
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.AutoMappers.MapTupleProfile.#ctor(Amm.AspNetCore.AutoMappers.IAutoMapAttributeFinder)">
+            <summary>
+            MapTupleProfile
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.AutoMappers.MapTupleProfile.CreateMap">
+            <summary>
+              创建map
+            </summary>
+        </member>
+        <member name="T:Amm.AspNetCore.Collections.CollectionExtensions">
+            <summary>
+             集合类拓展
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.Collections.CollectionExtensions.AddIfNotExist``1(System.Collections.Generic.ICollection{``0},``0)">
+            <summary>
+            如果不存在，添加项
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.Collections.CollectionExtensions.AddIfNotNull``1(System.Collections.Generic.ICollection{``0},``0)">
+            <summary>
+            如果不为空，添加项
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.Collections.CollectionExtensions.Shuffle``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            打乱一个集合的项顺序
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.Collections.CollectionExtensions.ExpandAndToString``1(System.Collections.Generic.IEnumerable{``0},System.String)">
+            <summary>
+            将集合展开并分别转换成字符串，再以指定的分隔符衔接，拼成一个字符串返回。默认分隔符为逗号
+            </summary>
+            <param name="collection"> 要处理的集合 </param>
+            <param name="separator"> 分隔符，默认为逗号 </param>
+            <returns> 拼接后的字符串 </returns>
+        </member>
+        <member name="M:Amm.AspNetCore.Collections.CollectionExtensions.ExpandAndToString``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.String},System.String)">
+            <summary>
+            循环集合的每一项，调用委托生成字符串，返回合并后的字符串。默认分隔符为逗号
+            </summary>
+            <param name="collection">待处理的集合</param>
+            <param name="itemFormatFunc">单个集合项的转换委托</param>
+            <param name="separetor">分隔符，默认为逗号</param>
+            <typeparam name="T">泛型类型</typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Amm.AspNetCore.Collections.CollectionExtensions.IsEmpty``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            集合是否为空
+            </summary>
+            <param name="collection"> 要处理的集合 </param>
+            <typeparam name="T"> 动态类型 </typeparam>
+            <returns> 为空返回True，不为空返回False </returns>
+        </member>
+        <member name="M:Amm.AspNetCore.Collections.CollectionExtensions.WhereIf``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean},System.Boolean)">
+            <summary>
+            根据第三方条件是否为真来决定是否执行指定条件的查询
+            </summary>
+            <param name="source"> 要查询的源 </param>
+            <param name="predicate"> 查询条件 </param>
+            <param name="condition"> 第三方条件 </param>
+            <typeparam name="T"> 动态类型 </typeparam>
+            <returns> 查询的结果 </returns>
+        </member>
+        <member name="M:Amm.AspNetCore.Collections.CollectionExtensions.DistinctBy``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1})">
+            <summary>
+            根据指定条件返回集合中不重复的元素
+            </summary>
+            <typeparam name="T">动态类型</typeparam>
+            <typeparam name="TKey">动态筛选条件类型</typeparam>
+            <param name="source">要操作的源</param>
+            <param name="keySelector">重复数据筛选条件</param>
+            <returns>不重复元素的集合</returns>
+        </member>
+        <!-- 对于成员“M:Amm.AspNetCore.Collections.CollectionExtensions.JoinAsString(System.Collections.Generic.IEnumerable{System.String},System.String)”忽略有格式错误的 XML 注释 -->
+        <member name="M:Amm.AspNetCore.Collections.CollectionExtensions.WhereIf``1(System.Collections.Generic.IEnumerable{``0},System.Boolean,System.Func{``0,System.Boolean})">
+            <summary>
+            Filters a <see cref="T:System.Collections.Generic.IEnumerable`1"/> by given predicate if given condition is true.
+            </summary>
+            <param name="source">Enumerable to apply filtering</param>
+            <param name="condition">A boolean value</param>
+            <param name="predicate">Predicate to filter the enumerable</param>
+            <returns>Filtered or not filtered enumerable based on <paramref name="condition"/></returns>
+        </member>
+        <member name="M:Amm.AspNetCore.Collections.CollectionExtensions.WhereIf``1(System.Collections.Generic.IEnumerable{``0},System.Boolean,System.Func{``0,System.Int32,System.Boolean})">
+            <summary>
+            Filters a <see cref="T:System.Collections.Generic.IEnumerable`1"/> by given predicate if given condition is true.
+            </summary>
+            <param name="source">Enumerable to apply filtering</param>
+            <param name="condition">A boolean value</param>
+            <param name="predicate">Predicate to filter the enumerable</param>
+            <returns>Filtered or not filtered enumerable based on <paramref name="condition"/></returns>
+        </member>
+        <member name="T:Amm.AspNetCore.Constants.RedisCacheBase">
+            <summary>
+                RedisCacheBase
+            </summary>
+        </member>
+        <member name="F:Amm.AspNetCore.Constants.RedisCacheBase.SecurityUserPermission">
+            <summary>
+                安全-用户权限
+            </summary>
+        </member>
+        <member name="T:Amm.AspNetCore.Datas.Entity.AmmCacheEnum">
+            <summary>
+            AmmCacheEnum
+            </summary>
+        </member>
+        <member name="F:Amm.AspNetCore.Datas.Entity.AmmCacheEnum.AmmUserPermission">
+            <summary>
+             用户权限键
+            </summary>
+        </member>
+        <member name="F:Amm.AspNetCore.Datas.Entity.AmmCacheEnum.UserAccessToken">
+            <summary>
+             用户token键
+            </summary>
+        </member>
+        <member name="F:Amm.AspNetCore.Datas.Entity.AmmCacheEnum.AmmWebApiModule">
+            <summary>
+              webapi模块
+            </summary>
+        </member>
+        <member name="T:Amm.AspNetCore.Datas.Entity.AmmConstants">
+            <summary>
+            框架中使用到的一些常量
+            </summary>
+        </member>
+        <member name="F:Amm.AspNetCore.Datas.Entity.AmmConstants.CurrentMvcFunctionKey">
+            <summary>
+            当前MVC功能键名
+            </summary>
+        </member>
+        <member name="F:Amm.AspNetCore.Datas.Entity.AmmConstants.VerifyCodeKeyPrefix">
+            <summary>
+            验证码缓存键名前缀
+            </summary>
+        </member>
+        <member name="T:Amm.AspNetCore.Datas.Entity.Check">
+            <summary>
+                参数合法性检查类
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.Datas.Entity.Check.Require``1(System.Boolean,System.String)">
+            <summary>
+                验证指定值的断言<paramref name="assertion" />是否为真，如果不为真，抛出指定消息<paramref name="message" />的指定类型
+                <typeparamref name="TException" />异常
+            </summary>
+            <typeparam name="TException">异常类型</typeparam>
+            <param name="assertion">要验证的断言。</param>
+            <param name="message">异常消息。</param>
+        </member>
+        <member name="M:Amm.AspNetCore.Datas.Entity.Check.Required``1(``0,System.Func{``0,System.Boolean},System.String)">
+            <summary>
+                验证指定值的断言表达式是否为真，不为值抛出<see cref="T:System.Exception" />异常
+            </summary>
+            <param name="value"></param>
+            <param name="assertionFunc">要验证的断言表达式</param>
+            <param name="message">异常消息</param>
+        </member>
+        <member name="M:Amm.AspNetCore.Datas.Entity.Check.Required``2(``0,System.Func{``0,System.Boolean},System.String)">
+            <summary>
+                验证指定值的断言表达式是否为真，不为真抛出<typeparamref name="TException" />异常
+            </summary>
+            <typeparam name="T">要判断的值的类型</typeparam>
+            <typeparam name="TException">抛出的异常类型</typeparam>
+            <param name="value">要判断的值</param>
+            <param name="assertionFunc">要验证的断言表达式</param>
+            <param name="message">异常消息</param>
+        </member>
+        <member name="M:Amm.AspNetCore.Datas.Entity.Check.NotNull``1(``0,System.String)">
+            <summary>
+                检查参数不能为空引用，否则抛出<see cref="T:System.ArgumentNullException" />异常。
+            </summary>
+            <param name="value"></param>
+            <param name="paramName">参数名称</param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:Amm.AspNetCore.Datas.Entity.Check.NotNullOrEmpty(System.String,System.String)">
+            <summary>
+                检查字符串不能为空引用或空字符串，否则抛出<see cref="T:System.ArgumentNullException" />异常或<see cref="T:System.ArgumentException" />异常。
+            </summary>
+            <param name="value"></param>
+            <param name="paramName">参数名称。</param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:Amm.AspNetCore.Datas.Entity.Check.NotEmpty(System.Guid,System.String)">
+            <summary>
+                检查Guid值不能为Guid.Empty，否则抛出<see cref="T:System.ArgumentException" />异常。
+            </summary>
+            <param name="value"></param>
+            <param name="paramName">参数名称。</param>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:Amm.AspNetCore.Datas.Entity.Check.NotNullOrEmpty``1(System.Collections.Generic.IEnumerable{``0},System.String)">
+            <summary>
+                检查集合不能为空引用或空集合，否则抛出<see cref="T:System.ArgumentNullException" />异常或<see cref="T:System.ArgumentException" />异常。
+            </summary>
+            <typeparam name="T">集合项的类型。</typeparam>
+            <param name="collection"></param>
+            <param name="paramName">参数名称。</param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:Amm.AspNetCore.Datas.Entity.Check.LessThan``1(``0,System.String,``0,System.Boolean)">
+            <summary>
+                检查参数必须小于[或可等于，参数<paramref name="canEqual" />]指定值，否则抛出<see cref="T:System.ArgumentOutOfRangeException" />异常。
+            </summary>
+            <typeparam name="T">参数类型。</typeparam>
+            <param name="value"></param>
+            <param name="paramName">参数名称。</param>
+            <param name="target">要比较的值。</param>
+            <param name="canEqual">是否可等于。</param>
+            <exception cref="T:System.ArgumentOutOfRangeException"></exception>
+        </member>
+        <member name="M:Amm.AspNetCore.Datas.Entity.Check.GreaterThan``1(``0,System.String,``0,System.Boolean)">
+            <summary>
+                检查参数必须大于[或可等于，参数<paramref name="canEqual" />]指定值，否则抛出<see cref="T:System.ArgumentOutOfRangeException" />异常。
+            </summary>
+            <typeparam name="T">参数类型。</typeparam>
+            <param name="value"></param>
+            <param name="paramName">参数名称。</param>
+            <param name="target">要比较的值。</param>
+            <param name="canEqual">是否可等于。</param>
+            <exception cref="T:System.ArgumentOutOfRangeException"></exception>
+        </member>
+        <member name="M:Amm.AspNetCore.Datas.Entity.Check.Between``1(``0,System.String,``0,``0,System.Boolean,System.Boolean)">
+            <summary>
+                检查参数必须在指定范围之间，否则抛出<see cref="T:System.ArgumentOutOfRangeException" />异常。
+            </summary>
+            <typeparam name="T">参数类型。</typeparam>
+            <param name="value"></param>
+            <param name="paramName">参数名称。</param>
+            <param name="start">比较范围的起始值。</param>
+            <param name="end">比较范围的结束值。</param>
+            <param name="startEqual">是否可等于起始值</param>
+            <param name="endEqual">是否可等于结束值</param>
+            <exception cref="T:System.ArgumentOutOfRangeException"></exception>
+        </member>
+        <member name="M:Amm.AspNetCore.Datas.Entity.Check.DirectoryExists(System.String,System.String)">
+            <summary>
+                检查指定路径的文件夹必须存在，否则抛出<see cref="T:System.IO.DirectoryNotFoundException" />异常。
+            </summary>
+            <param name="directory"></param>
+            <param name="paramName">参数名称。</param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+            <exception cref="T:System.IO.DirectoryNotFoundException"></exception>
+        </member>
+        <member name="M:Amm.AspNetCore.Datas.Entity.Check.FileExists(System.String,System.String)">
+            <summary>
+                检查指定路径的文件必须存在，否则抛出<see cref="T:System.IO.FileNotFoundException" />异常。
+            </summary>
+            <param name="filename"></param>
+            <param name="paramName">参数名称。</param>
+            <exception cref="T:System.ArgumentNullException">当文件路径为null时</exception>
+            <exception cref="T:System.IO.FileNotFoundException">当文件路径不存在时</exception>
+        </member>
+        <member name="T:Amm.AspNetCore.Datas.Entity.EntityBase`1">
+            <summary>
+              实体基类
+            </summary>
+            <typeparam name="TPrimaryKey"></typeparam>
+        </member>
+        <member name="T:Amm.AspNetCore.Datas.Entity.EntityDto`1">
+            <summary>
+            EntityDto
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:Amm.AspNetCore.Datas.Entity.EntityDto`1.Id">
+            <summary>
+             主键ID
+            </summary>
+        </member>
+        <member name="T:Amm.AspNetCore.Datas.Entity.NullEntity">
+            <summary>
+              空实体
+            </summary>
+        </member>
+        <member name="T:Amm.AspNetCore.Datas.Entity.PageInputDto">
+            <summary>
+              分页请求
+            </summary>
+        </member>
+        <member name="P:Amm.AspNetCore.Datas.Entity.PageInputDto.PageIndex">
+            <summary>
+             当前页码，默认为第一页
+            </summary>
+        </member>
+        <member name="P:Amm.AspNetCore.Datas.Entity.PageInputDto.PageSize">
+            <summary>
+              分页条数，默认分页10条
+            </summary>
+        </member>
+        <member name="P:Amm.AspNetCore.Datas.Entity.PageInputDto.Sort">
+            <summary>
+              排序字符串，默认为Id Desc
+             <remarks>格式: Id Desc</remarks>
+            </summary>
+        </member>
+        <member name="T:Amm.AspNetCore.Datas.Entity.PageResultWrapper`1">
+            <summary>
+              分页结果包裹器
+            </summary>
+        </member>
+        <member name="P:Amm.AspNetCore.Datas.Entity.PageResultWrapper`1.PageIndex">
+            <summary>
+             当前页面
+            </summary>
+        </member>
+        <member name="P:Amm.AspNetCore.Datas.Entity.PageResultWrapper`1.TotalCount">
+            <summary>
+             分页总条数
+            </summary>
+        </member>
+        <member name="P:Amm.AspNetCore.Datas.Entity.PageResultWrapper`1.PageSize">
+            <summary>
+              分页条数
+            </summary>
+        </member>
+        <member name="P:Amm.AspNetCore.Datas.Entity.PageResultWrapper`1.Data">
+            <summary>
+              分页结果对象
+            </summary>
+        </member>
+        <member name="P:Amm.AspNetCore.Datas.Entity.PageResultWrapper`1.Extend">
+            <summary>
+             扩展字段
+            </summary>
+        </member>
+        <member name="T:Amm.AspNetCore.Datas.Entity.SoftDelete">
+            <summary>
+              软删除基类
+            </summary>
+        </member>
+        <member name="P:Amm.AspNetCore.Datas.Entity.SoftDelete.IsDeleted">
+            <summary>
+             是否删除
+            </summary>
+        </member>
+        <member name="T:Amm.AspNetCore.Datas.Singleton`1">
+            <summary>
+                定义一个指定类型的单例，该实例的生命周期将跟随整个应用程序。
+            </summary>
+            <typeparam name="T">要创建单例的类型。</typeparam>
+        </member>
+        <member name="P:Amm.AspNetCore.Datas.Singleton`1.Instance">
+            <summary>
+                获取指定类型的单例实例
+            </summary>
+        </member>
+        <member name="T:Amm.AspNetCore.Datas.Singleton">
+            <summary>
+                提供一个字典容器，按类型装载所有<see cref="T:Amm.AspNetCore.Datas.Singleton`1" />的单例实例
+            </summary>
+        </member>
+        <member name="P:Amm.AspNetCore.Datas.Singleton.AllSingletons">
+            <summary>
+                获取 单例对象字典
+            </summary>
+        </member>
+        <member name="T:Amm.AspNetCore.Dependency.IScopedServiceResolver">
+            <summary>
+                <see cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Scoped" />服务解析器
+            </summary>
+        </member>
+        <member name="P:Amm.AspNetCore.Dependency.IScopedServiceResolver.ResolveEnabled">
+            <summary>
+                获取 是否可解析
+            </summary>
+        </member>
+        <member name="P:Amm.AspNetCore.Dependency.IScopedServiceResolver.ScopedProvider">
+            <summary>
+                获取 <see cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Scoped" />生命周期的服务提供者
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.Dependency.IScopedServiceResolver.GetService``1">
+            <summary>
+                获取指定服务类型的实例
+            </summary>
+            <typeparam name="T">服务类型</typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Amm.AspNetCore.Dependency.IScopedServiceResolver.GetService(System.Type)">
+            <summary>
+                获取指定服务类型的实例
+            </summary>
+            <param name="serviceType">服务类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Amm.AspNetCore.Dependency.IScopedServiceResolver.GetServices``1">
+            <summary>
+                获取指定服务类型的所有实例
+            </summary>
+            <typeparam name="T">服务类型</typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Amm.AspNetCore.Dependency.IScopedServiceResolver.GetServices(System.Type)">
+            <summary>
+                获取指定服务类型的所有实例
+            </summary>
+            <param name="serviceType">服务类型</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amm.AspNetCore.Dependency.ServiceLocator">
+            <summary>
+                应用程序服务定位器，可随时正常解析<see cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Singleton" />与<see cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Transient" />生命周期类型的服务
+                如果当前处于HttpContext有效的范围内，可正常解析<see cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Scoped" />的服务
+                注：服务定位器尚不能正常解析 RootServiceProvider.CreateScope() 生命周期内的 Scoped 的服务
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.Dependency.ServiceLocator.#ctor">
+            <summary>
+                初始化一个<see cref="T:Amm.AspNetCore.Dependency.ServiceLocator" />类型的新实例
+            </summary>
+        </member>
+        <member name="P:Amm.AspNetCore.Dependency.ServiceLocator.Instance">
+            <summary>
+                获取 服务器定位器实例
+            </summary>
+        </member>
+        <member name="P:Amm.AspNetCore.Dependency.ServiceLocator.IsProviderEnabled">
+            <summary>
+                获取 ServiceProvider是否为可用
+            </summary>
+        </member>
+        <member name="P:Amm.AspNetCore.Dependency.ServiceLocator.ScopedProvider">
+            <summary>
+                获取 <see cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Scoped" />生命周期的服务提供者
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.Dependency.ServiceLocator.Dispose">
+            <summary>Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.</summary>
+        </member>
+        <member name="M:Amm.AspNetCore.Dependency.ServiceLocator.InScoped">
+            <summary>
+                获取当前是否处于<see cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Scoped" />生命周期中
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Amm.AspNetCore.Dependency.ServiceLocator.SetServiceCollection(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+                设置应用程序服务集合
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.Dependency.ServiceLocator.SetApplicationServiceProvider(System.IServiceProvider)">
+            <summary>
+                设置应用程序服务提供者
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.Dependency.ServiceLocator.ExcuteScopedWork(System.Action{System.IServiceProvider})">
+            <summary>
+                执行<see cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Scoped" />生命周期的业务逻辑
+                1.当前处理<see cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Scoped" />生命周期外，使用CreateScope创建<see cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Scoped" />
+                生命周期的ServiceProvider来执行，并释放资源
+                2.当前处于<see cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Scoped" />生命周期内，直接使用<see cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Scoped" />的ServiceProvider来执行
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.Dependency.ServiceLocator.ExcuteScopedWorkAsync(System.Func{System.IServiceProvider,System.Threading.Tasks.Task})">
+            <summary>
+                异步执行<see cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Scoped" />生命周期的业务逻辑
+                1.当前处理<see cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Scoped" />生命周期外，使用CreateScope创建<see cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Scoped" />
+                生命周期的ServiceProvider来执行，并释放资源
+                2.当前处于<see cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Scoped" />生命周期内，直接使用<see cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Scoped" />的ServiceProvider来执行
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.Dependency.ServiceLocator.ExcuteScopedWork``1(System.Func{System.IServiceProvider,``0})">
+            <summary>
+                执行<see cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Scoped" />生命周期的业务逻辑，并获取返回值
+                1.当前处理<see cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Scoped" />生命周期外，使用CreateScope创建<see cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Scoped" />
+                生命周期的ServiceProvider来执行，并释放资源
+                2.当前处于<see cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Scoped" />生命周期内，直接使用<see cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Scoped" />的ServiceProvider来执行
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.Dependency.ServiceLocator.ExcuteScopedWorkAsync``1(System.Func{System.IServiceProvider,System.Threading.Tasks.Task{``0}})">
+            <summary>
+                执行<see cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Scoped" />生命周期的业务逻辑，并获取返回值
+                1.当前处理<see cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Scoped" />生命周期外，使用CreateScope创建<see cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Scoped" />
+                生命周期的ServiceProvider来执行，并释放资源
+                2.当前处于<see cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Scoped" />生命周期内，直接使用<see cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Scoped" />的ServiceProvider来执行
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.Dependency.ServiceLocator.GetServiceDescriptors">
+            <summary>
+                获取所有已注册的<see cref="T:Microsoft.Extensions.DependencyInjection.ServiceDescriptor" />对象
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.Dependency.ServiceLocator.GetService``1">
+            <summary>
+                解析指定类型的服务实例
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.Dependency.ServiceLocator.GetService(System.Type)">
+            <summary>
+                解析指定类型的服务实例
+            </summary>
+            <param name="serviceType">服务类型</param>
+        </member>
+        <member name="M:Amm.AspNetCore.Dependency.ServiceLocator.GetServices``1">
+            <summary>
+                解析指定类型的所有服务实例
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.Dependency.ServiceLocator.GetServices(System.Type)">
+            <summary>
+                解析指定类型的所有服务实例
+            </summary>
+            <param name="serviceType">服务类型</param>
+        </member>
+        <member name="M:Amm.AspNetCore.Dependency.ServiceLocator.GetLogger``1">
+            <summary>
+                获取指定类型的日志对象
+            </summary>
+            <typeparam name="T">非静态强类型</typeparam>
+            <returns>日志对象</returns>
+        </member>
+        <member name="M:Amm.AspNetCore.Dependency.ServiceLocator.GetLogger(System.Type)">
+            <summary>
+                获取指定类型的日志对象
+            </summary>
+            <param name="type">指定类型</param>
+            <returns>日志对象</returns>
+        </member>
+        <member name="M:Amm.AspNetCore.Dependency.ServiceLocator.GetLogger(System.String)">
+            <summary>
+                获取指定名称的日志对象
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.Dependency.ServiceLocator.GetCurrentUser">
+            <summary>
+                获取当前用户
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.Dependency.ServiceLocator.GetConfiguration(System.String)">
+            <summary>
+                获取指定节点的选项值
+            </summary>
+        </member>
+        <member name="T:Amm.AspNetCore.Encrypt.Encryption">
+            <summary>
+              加密类
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.Encrypt.Encryption.DesEncrypt(System.String,System.String)">
+            <summary>
+              加密
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Amm.AspNetCore.Encrypt.Encryption.Decrypt(System.String,System.String)">
+            <summary>
+             解密
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Amm.AspNetCore.Encrypt.EncryptionOptions">
+            <summary>
+             加密配置类
+            </summary>
+        </member>
+        <member name="T:Amm.AspNetCore.Exceptions.UserFriendlyException">
+            <summary>
+                友好错误异常
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.Exceptions.UserFriendlyException.#ctor(System.String)">
+            <summary>
+            UserFriendlyException
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Amm.AspNetCore.Exceptions.UserFriendlyException.#ctor(System.Exception)">
+            <summary>
+            UserFriendlyException
+            </summary>
+            <param name="exception"></param>
+        </member>
+        <member name="T:Amm.AspNetCore.Extentions.BooleanExtensions">
+            <summary>
+                布尔值<see cref="T:System.Boolean" />类型的扩展辅助操作类
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.Extentions.BooleanExtensions.ToLower(System.Boolean)">
+            <summary>
+                把布尔值转换为小写字符串
+            </summary>
+        </member>
+        <member name="T:Amm.AspNetCore.Extentions.DictionaryExtensions">
+            <summary>
+                字典辅助扩展方法
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.Extentions.DictionaryExtensions.GetOrDefault``2(System.Collections.Generic.IDictionary{``0,``1},``0)">
+            <summary>
+                从字典中获取值，不存在则返回字典<typeparamref name="TValue" />类型的默认值
+            </summary>
+            <typeparam name="TKey">字典键类型</typeparam>
+            <typeparam name="TValue">字典值类型</typeparam>
+            <param name="dictionary">要操作的字典</param>
+            <param name="key">指定键名</param>
+            <returns>获取到的值</returns>
+        </member>
+        <member name="M:Amm.AspNetCore.Extentions.DictionaryExtensions.GetOrAdd``2(System.Collections.Generic.IDictionary{``0,``1},``0,System.Func{``1})">
+            <summary>
+                获取指定键的值，不存在则按指定委托添加值
+            </summary>
+            <typeparam name="TKey">字典键类型</typeparam>
+            <typeparam name="TValue">字典值类型</typeparam>
+            <param name="dictionary">要操作的字典</param>
+            <param name="key">指定键名</param>
+            <param name="addFunc">添加值的委托</param>
+            <returns>获取到的值</returns>
+        </member>
+        <member name="T:Amm.AspNetCore.Extentions.EnumExtensions">
+            <summary>
+                枚举<see cref="T:System.Enum" />的扩展辅助操作方法
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.Extentions.EnumExtensions.ToDescription(System.Enum)">
+            <summary>
+                获取枚举项上的<see cref="T:System.ComponentModel.DescriptionAttribute" />特性的文字描述
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Amm.AspNetCore.Extentions.ObjectExtensions">
+            <summary>
+                基类型<see cref="T:System.Object" />扩展辅助操作类
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.Extentions.ObjectExtensions.CastTo(System.Object,System.Type)">
+            <summary>
+                把对象类型转换为指定类型
+            </summary>
+            <param name="value"></param>
+            <param name="conversionType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amm.AspNetCore.Extentions.ObjectExtensions.CastTo``1(System.Object)">
+            <summary>
+                把对象类型转化为指定类型
+            </summary>
+            <typeparam name="T"> 动态类型 </typeparam>
+            <param name="value"> 要转化的源对象 </param>
+            <returns> 转化后的指定类型的对象，转化失败引发异常。 </returns>
+        </member>
+        <member name="M:Amm.AspNetCore.Extentions.ObjectExtensions.CastTo``1(System.Object,``0)">
+            <summary>
+                把对象类型转化为指定类型，转化失败时返回指定的默认值
+            </summary>
+            <typeparam name="T"> 动态类型 </typeparam>
+            <param name="value"> 要转化的源对象 </param>
+            <param name="defaultValue"> 转化失败返回的指定默认值 </param>
+            <returns> 转化后的指定类型对象，转化失败时返回指定的默认值 </returns>
+        </member>
+        <member name="M:Amm.AspNetCore.Extentions.ObjectExtensions.IsBetween``1(System.IComparable{``0},``0,``0,System.Boolean,System.Boolean)">
+            <summary>
+                判断当前值是否介于指定范围内
+            </summary>
+            <typeparam name="T"> 动态类型 </typeparam>
+            <param name="value"> 动态类型对象 </param>
+            <param name="start"> 范围起点 </param>
+            <param name="end"> 范围终点 </param>
+            <param name="leftEqual"> 是否可等于上限（默认等于） </param>
+            <param name="rightEqual"> 是否可等于下限（默认等于） </param>
+            <returns> 是否介于 </returns>
+        </member>
+        <member name="M:Amm.AspNetCore.Extentions.ObjectExtensions.IsInRange``1(System.IComparable{``0},``0,``0,System.Boolean,System.Boolean)">
+            <summary>
+                判断当前值是否介于指定范围内
+            </summary>
+            <typeparam name="T"> 动态类型 </typeparam>
+            <param name="value"> 动态类型对象 </param>
+            <param name="min">范围小值</param>
+            <param name="max">范围大值</param>
+            <param name="minEqual">是否可等于小值（默认等于）</param>
+            <param name="maxEqual">是否可等于大值（默认等于）</param>
+        </member>
+        <member name="M:Amm.AspNetCore.Extentions.ObjectExtensions.IsIn``1(``0,``0[])">
+            <summary>
+                是否存在于
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.Extentions.ObjectExtensions.ToDynamic(System.Object)">
+            <summary>
+                将对象[主要是匿名对象]转换为dynamic
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.Extentions.ObjectExtensions.DeepClone``1(``0)">
+            <summary>
+                对象深度拷贝，复制出一个数据一样，但地址不一样的新版本
+            </summary>
+        </member>
+        <member name="T:Amm.AspNetCore.Extentions.ParamterCheckExtensions">
+            <summary>
+                用于参数检查的扩展方法
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.Extentions.ParamterCheckExtensions.Require``1(System.Boolean,System.String)">
+            <summary>
+                验证指定值的断言<paramref name="assertion" />是否为真，如果不为真，抛出指定消息<paramref name="message" />的指定类型
+                <typeparamref name="TException" />异常
+            </summary>
+            <typeparam name="TException">异常类型</typeparam>
+            <param name="assertion">要验证的断言。</param>
+            <param name="message">异常消息。</param>
+        </member>
+        <member name="M:Amm.AspNetCore.Extentions.ParamterCheckExtensions.Required``1(``0,System.Func{``0,System.Boolean},System.String)">
+            <summary>
+                验证指定值的断言表达式是否为真，不为值抛出<see cref="T:System.Exception" />异常
+            </summary>
+            <param name="value"></param>
+            <param name="assertionFunc">要验证的断言表达式</param>
+            <param name="message">异常消息</param>
+        </member>
+        <member name="M:Amm.AspNetCore.Extentions.ParamterCheckExtensions.Required``2(``0,System.Func{``0,System.Boolean},System.String)">
+            <summary>
+                验证指定值的断言表达式是否为真，不为真抛出<typeparamref name="TException" />异常
+            </summary>
+            <typeparam name="T">要判断的值的类型</typeparam>
+            <typeparam name="TException">抛出的异常类型</typeparam>
+            <param name="value">要判断的值</param>
+            <param name="assertionFunc">要验证的断言表达式</param>
+            <param name="message">异常消息</param>
+        </member>
+        <member name="M:Amm.AspNetCore.Extentions.ParamterCheckExtensions.CheckNotNull``1(``0,System.String)">
+            <summary>
+                检查参数不能为空引用，否则抛出<see cref="T:System.ArgumentNullException" />异常。
+            </summary>
+            <param name="value"></param>
+            <param name="paramName">参数名称</param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:Amm.AspNetCore.Extentions.ParamterCheckExtensions.CheckNotNullOrEmpty(System.String,System.String)">
+            <summary>
+                检查字符串不能为空引用或空字符串，否则抛出<see cref="T:System.ArgumentNullException" />异常或<see cref="T:System.ArgumentException" />异常。
+            </summary>
+            <param name="value"></param>
+            <param name="paramName">参数名称。</param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:Amm.AspNetCore.Extentions.ParamterCheckExtensions.CheckNotEmpty(System.Guid,System.String)">
+            <summary>
+                检查Guid值不能为Guid.Empty，否则抛出<see cref="T:System.ArgumentException" />异常。
+            </summary>
+            <param name="value"></param>
+            <param name="paramName">参数名称。</param>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:Amm.AspNetCore.Extentions.ParamterCheckExtensions.CheckNotNullOrEmpty``1(System.Collections.Generic.IEnumerable{``0},System.String)">
+            <summary>
+                检查集合不能为空引用或空集合，否则抛出<see cref="T:System.ArgumentNullException" />异常或<see cref="T:System.ArgumentException" />异常。
+            </summary>
+            <typeparam name="T">集合项的类型。</typeparam>
+            <param name="collection"></param>
+            <param name="paramName">参数名称。</param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:Amm.AspNetCore.Extentions.ParamterCheckExtensions.CheckLessThan``1(``0,System.String,``0,System.Boolean)">
+            <summary>
+                检查参数必须小于[或可等于，参数canEqual]指定值，否则抛出<see cref="T:System.ArgumentOutOfRangeException" />异常。
+            </summary>
+            <typeparam name="T">参数类型。</typeparam>
+            <param name="value"></param>
+            <param name="paramName">参数名称。</param>
+            <param name="target">要比较的值。</param>
+            <param name="canEqual">是否可等于。</param>
+            <exception cref="T:System.ArgumentOutOfRangeException"></exception>
+        </member>
+        <member name="M:Amm.AspNetCore.Extentions.ParamterCheckExtensions.CheckGreaterThan``1(``0,System.String,``0,System.Boolean)">
+            <summary>
+                检查参数必须大于[或可等于，参数canEqual]指定值，否则抛出<see cref="T:System.ArgumentOutOfRangeException" />异常。
+            </summary>
+            <typeparam name="T">参数类型。</typeparam>
+            <param name="value"></param>
+            <param name="paramName">参数名称。</param>
+            <param name="target">要比较的值。</param>
+            <param name="canEqual">是否可等于。</param>
+            <exception cref="T:System.ArgumentOutOfRangeException"></exception>
+        </member>
+        <member name="M:Amm.AspNetCore.Extentions.ParamterCheckExtensions.CheckBetween``1(``0,System.String,``0,``0,System.Boolean,System.Boolean)">
+            <summary>
+                检查参数必须在指定范围之间，否则抛出<see cref="T:System.ArgumentOutOfRangeException" />异常。
+            </summary>
+            <typeparam name="T">参数类型。</typeparam>
+            <param name="value"></param>
+            <param name="paramName">参数名称。</param>
+            <param name="start">比较范围的起始值。</param>
+            <param name="end">比较范围的结束值。</param>
+            <param name="startEqual">是否可等于起始值</param>
+            <param name="endEqual">是否可等于结束值</param>
+            <exception cref="T:System.ArgumentOutOfRangeException"></exception>
+        </member>
+        <member name="M:Amm.AspNetCore.Extentions.ParamterCheckExtensions.CheckDirectoryExists(System.String,System.String)">
+            <summary>
+                检查指定路径的文件夹必须存在，否则抛出<see cref="T:System.IO.DirectoryNotFoundException" />异常。
+            </summary>
+            <param name="directory"></param>
+            <param name="paramName">参数名称。</param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+            <exception cref="T:System.IO.DirectoryNotFoundException"></exception>
+        </member>
+        <member name="M:Amm.AspNetCore.Extentions.ParamterCheckExtensions.CheckFileExists(System.String,System.String)">
+            <summary>
+                检查指定路径的文件必须存在，否则抛出<see cref="T:System.IO.FileNotFoundException" />异常。
+            </summary>
+            <param name="filename"></param>
+            <param name="paramName">参数名称。</param>
+            <exception cref="T:System.ArgumentNullException">当文件路径为null时</exception>
+            <exception cref="T:System.IO.FileNotFoundException">当文件路径不存在时</exception>
+        </member>
+        <member name="T:Amm.AspNetCore.Extentions.RandomExtensions">
+            <summary>
+            随机数<see cref="T:System.Random"/>类型的扩展辅助操作类
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.Extentions.RandomExtensions.NextBoolean(System.Random)">
+            <summary>
+            返回随机布尔值
+            </summary>
+            <param name="random"></param>
+            <returns>随机布尔值</returns>
+        </member>
+        <member name="M:Amm.AspNetCore.Extentions.RandomExtensions.NextEnum``1(System.Random)">
+            <summary>
+            返回指定枚举类型的随机枚举值
+            </summary>
+            <param name="random"></param>
+            <returns>指定枚举类型的随机枚举值</returns>
+        </member>
+        <member name="M:Amm.AspNetCore.Extentions.RandomExtensions.NextBytes(System.Random,System.Int32)">
+            <summary>
+            返回随机数填充的指定长度的数组
+            </summary>
+            <param name="random"></param>
+            <param name="length">数组长度</param>
+            <returns>随机数填充的指定长度的数组</returns>
+        </member>
+        <member name="M:Amm.AspNetCore.Extentions.RandomExtensions.NextItem``1(System.Random,``0[])">
+            <summary>
+            返回数组中的随机元素
+            </summary>
+            <typeparam name="T">元素类型</typeparam>
+            <param name="random"></param>
+            <param name="items">元素数组</param>
+            <returns>元素数组中的某个随机项</returns>
+        </member>
+        <member name="M:Amm.AspNetCore.Extentions.RandomExtensions.NextDateTime(System.Random,System.DateTime,System.DateTime)">
+            <summary>
+            返回指定时间段内的随机时间值
+            </summary>
+            <param name="random"></param>
+            <param name="minValue">时间范围的最小值</param>
+            <param name="maxValue">时间范围的最大值</param>
+            <returns>指定时间段内的随机时间值</returns>
+        </member>
+        <member name="M:Amm.AspNetCore.Extentions.RandomExtensions.NextDateTime(System.Random)">
+            <summary>
+            返回随机时间值
+            </summary>
+            <param name="random"></param>
+            <returns>随机时间值</returns>
+        </member>
+        <member name="M:Amm.AspNetCore.Extentions.RandomExtensions.NextNumberString(System.Random,System.Int32)">
+            <summary>
+            获取指定的长度的随机数字字符串
+            </summary>
+            <param name="random"></param>
+            <param name="length">要获取随机数长度</param>
+            <returns>指定长度的随机数字符串</returns>
+        </member>
+        <member name="M:Amm.AspNetCore.Extentions.RandomExtensions.NextLetterString(System.Random,System.Int32)">
+            <summary>
+            获取指定的长度的随机字母字符串
+            </summary>
+            <param name="random"></param>
+            <param name="length">要获取随机数长度</param>
+            <returns>指定长度的随机字母组成字符串</returns>
+        </member>
+        <member name="M:Amm.AspNetCore.Extentions.RandomExtensions.NextLetterAndNumberString(System.Random,System.Int32)">
+            <summary>
+            获取指定的长度的随机字母和数字字符串
+            </summary>
+            <param name="random"></param>
+            <param name="length">要获取随机数长度</param>
+            <returns>指定长度的随机字母和数字组成字符串</returns>
+        </member>
+        <member name="M:Amm.AspNetCore.Extentions.RandomExtensions.NextSurName(System.Random)">
+            <summary>
+            获取随机的姓名
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.Extentions.RandomExtensions.NextNationName(System.Random)">
+            <summary>
+            获取随机的民族
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.Extentions.RandomExtensions.NextPhoneNumber(System.Random,System.String[])">
+            <summary>
+            获取随机手机号
+            </summary>
+            <param name="random"></param>
+            <param name="sections">指定手机号段，号段字符串必须是7位数值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Amm.AspNetCore.Extentions.RandomExtensions.NextIdentityCardId(System.Random,System.String[])">
+            <summary>
+            获取随机身份证号
+            </summary>
+            <param name="random"></param>
+            <param name="areaCodes">指定的地区码</param>
+            <returns></returns>
+        </member>
+        <member name="M:Amm.AspNetCore.Extentions.RandomExtensions.NextItems``1(System.Random,``0[],System.Int32,``0[])">
+            <summary>
+            从指定源集合中获取排除指定元素的指定个数的随机项集合
+            </summary>
+            <typeparam name="T">项类型</typeparam>
+            <param name="random"></param>
+            <param name="source">源集合</param>
+            <param name="count">要获取的子集合的项数量</param>
+            <param name="excepts">要排除的项集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:Amm.AspNetCore.Extentions.RandomExtensions.NextItems(System.Random,System.Int32,System.Int32,System.Int32,System.Int32[])">
+            <summary>
+            从指定数值范围中获取排除指定数值外的指定个数随机数值集合
+            </summary>
+            <param name="random"></param>
+            <param name="min">数值范围小值</param>
+            <param name="max">数值范围大值</param>
+            <param name="count">要获取的子集合元素数量</param>
+            <param name="excepts">要排除的数值</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amm.AspNetCore.Extentions.StringBuilderExtensions">
+            <summary>
+                StringBuilder 扩展方法类
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.Extentions.StringBuilderExtensions.TrimStart(System.Text.StringBuilder)">
+            <summary>
+                去除<seealso cref="T:System.Text.StringBuilder" />开头的空格
+            </summary>
+            <param name="sb">StringBuilder</param>
+            <returns>返回修改后的StringBuilder，主要用于链式操作</returns>
+        </member>
+        <member name="M:Amm.AspNetCore.Extentions.StringBuilderExtensions.TrimStart(System.Text.StringBuilder,System.Char)">
+            <summary>
+                去除<seealso cref="T:System.Text.StringBuilder" />开头的指定<seealso cref="T:System.Char" />
+            </summary>
+            <param name="sb"></param>
+            <param name="c">要去掉的<seealso cref="T:System.Char" /></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amm.AspNetCore.Extentions.StringBuilderExtensions.TrimStart(System.Text.StringBuilder,System.Char[])">
+            <summary>
+                去除<seealso cref="T:System.Text.StringBuilder" />开头的指定字符数组
+            </summary>
+            <param name="sb"></param>
+            <param name="cs">要去掉的字符数组</param>
+            <returns></returns>
+        </member>
+        <member name="M:Amm.AspNetCore.Extentions.StringBuilderExtensions.TrimStart(System.Text.StringBuilder,System.String)">
+            <summary>
+                去除<see cref="T:System.Text.StringBuilder" />开头的指定的<seealso cref="T:System.String" />
+            </summary>
+            <param name="sb"></param>
+            <param name="str">要去掉的<seealso cref="T:System.String" /></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amm.AspNetCore.Extentions.StringBuilderExtensions.TrimEnd(System.Text.StringBuilder)">
+            <summary>
+                去除StringBuilder结尾的空格
+            </summary>
+            <param name="sb">StringBuilder</param>
+            <returns>返回修改后的StringBuilder，主要用于链式操作</returns>
+        </member>
+        <member name="M:Amm.AspNetCore.Extentions.StringBuilderExtensions.TrimEnd(System.Text.StringBuilder,System.Char)">
+            <summary>
+                去除<see cref="T:System.Text.StringBuilder" />结尾指定字符
+            </summary>
+            <param name="sb"></param>
+            <param name="c">要去掉的字符</param>
+            <returns></returns>
+        </member>
+        <member name="M:Amm.AspNetCore.Extentions.StringBuilderExtensions.TrimEnd(System.Text.StringBuilder,System.Char[])">
+            <summary>
+                去除<see cref="T:System.Text.StringBuilder" />结尾指定字符数组
+            </summary>
+            <param name="sb"></param>
+            <param name="chars">要去除的字符数组</param>
+            <returns></returns>
+        </member>
+        <member name="M:Amm.AspNetCore.Extentions.StringBuilderExtensions.TrimEnd(System.Text.StringBuilder,System.String)">
+            <summary>
+                去除<see cref="T:System.Text.StringBuilder" />结尾指定字符串
+            </summary>
+            <param name="sb"></param>
+            <param name="str">要去除的字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Amm.AspNetCore.Extentions.StringBuilderExtensions.Trim(System.Text.StringBuilder)">
+            <summary>
+                去除StringBuilder两端的空格
+            </summary>
+            <param name="sb">StringBuilder</param>
+            <returns>返回修改后的StringBuilder，主要用于链式操作</returns>
+        </member>
+        <member name="M:Amm.AspNetCore.Extentions.StringBuilderExtensions.SubString(System.Text.StringBuilder,System.Int32,System.Int32)">
+            <summary>
+                返回<see cref="T:System.Text.StringBuilder" />从起始位置指定长度的字符串
+            </summary>
+            <param name="sb"></param>
+            <param name="start">起始位置</param>
+            <param name="length">长度</param>
+            <returns>字符串</returns>
+            <exception cref="T:System.OverflowException">超出字符串索引长度异常</exception>
+        </member>
+        <member name="T:Amm.AspNetCore.Extentions.TryCatchExtensions">
+            <summary>
+            Try-Catch扩展操作
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.Extentions.TryCatchExtensions.TryCatch``1(``0,System.Action{``0},System.Action{System.Exception},System.Action{``0})">
+            <summary>
+            对某对象执行指定功能与后续功能，并处理异常情况
+            </summary>
+            <typeparam name="T">对象类型</typeparam>
+            <param name="source">值</param>
+            <param name="action">要对值执行的主功能代码</param>
+            <param name="failureAction">catch中的功能代码</param>
+            <param name="successAction">主功能代码成功后执行的功能代码</param>
+            <returns>主功能代码是否顺利执行</returns>
+        </member>
+        <member name="M:Amm.AspNetCore.Extentions.TryCatchExtensions.TryCatch``1(``0,System.Action{``0},System.Action{System.Exception})">
+            <summary>
+            对某对象执行指定功能，并处理异常情况
+            </summary>
+            <typeparam name="T">对象类型</typeparam>
+            <param name="source">值</param>
+            <param name="action">要对值执行的主功能代码</param>
+            <param name="failureAction">catch中的功能代码</param>
+            <returns>主功能代码是否顺利执行</returns>
+        </member>
+        <member name="M:Amm.AspNetCore.Extentions.TryCatchExtensions.TryCatch``2(``0,System.Func{``0,``1},System.Action{System.Exception},System.Action{``0})">
+            <summary>
+            对某对象执行指定功能，并处理异常情况与返回值
+            </summary>
+            <typeparam name="T">对象类型</typeparam>
+            <typeparam name="TResult">返回值类型</typeparam>
+            <param name="source">值</param>
+            <param name="func">要对值执行的主功能代码</param>
+            <param name="failureAction">catch中的功能代码</param>
+            <param name="successAction">主功能代码成功后执行的功能代码</param>
+            <returns>功能代码的返回值，如果出现异常，则返回对象类型的默认值</returns>
+        </member>
+        <member name="M:Amm.AspNetCore.Extentions.TryCatchExtensions.TryCatch``2(``0,System.Func{``0,``1},System.Action{System.Exception})">
+            <summary>
+            对某对象执行指定功能，并处理异常情况与返回值
+            </summary>
+            <typeparam name="T">对象类型</typeparam>
+            <typeparam name="TResult">返回值类型</typeparam>
+            <param name="source">值</param>
+            <param name="func">要对值执行的主功能代码</param>
+            <param name="failureAction">catch中的功能代码</param>
+            <returns>功能代码的返回值，如果出现异常，则返回对象类型的默认值</returns>
+        </member>
+        <member name="M:Amm.AspNetCore.Extentions.TryCatchExtensions.TryFinally``1(``0,System.Action{``0},System.Action{``0})">
+            <summary>
+            对某对象执行指定功能，并处理finally
+            </summary>
+        </member>
+        <member name="T:Amm.AspNetCore.Identity.ClaimsPrincipalExtension">
+            <summary>
+            ClaimsPrincipal拓展类 
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.Identity.ClaimsPrincipalExtension.GetClaimValue(System.Collections.Generic.IEnumerable{System.Security.Claims.Claim},System.String)">
+            <summary>
+            获取申明值
+            </summary>
+            <param name="claims"></param>
+            <param name="claimType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amm.AspNetCore.Identity.ClaimsPrincipalExtension.GetClaimValue(System.Security.Claims.ClaimsPrincipal,System.String)">
+            <summary>
+             获取申明值
+            </summary>
+            <param name="claimsPrincipal"></param>
+            <param name="claimType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amm.AspNetCore.Identity.ClaimsPrincipalExtension.GetCommonClaimValue(System.Security.Claims.ClaimsPrincipal,Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+             获取请求通用值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Amm.AspNetCore.Identity.ClaimTypeExtensions">
+            <summary>
+              用户申明拓展类
+            </summary>
+        </member>
+        <member name="F:Amm.AspNetCore.Identity.ClaimTypeExtensions.CompanyName">
+            <summary>
+             公司名字
+            </summary>
+        </member>
+        <member name="F:Amm.AspNetCore.Identity.ClaimTypeExtensions.UserName">
+            <summary>
+             用户名
+            </summary>
+        </member>
+        <member name="F:Amm.AspNetCore.Identity.ClaimTypeExtensions.HeadPortrait">
+            <summary>
+             头像
+            </summary>
+        </member>
+        <member name="T:Amm.AspNetCore.Logger.Log4net.Log4NetExtensions">
+            <summary>
+            Log4Net模块
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.Logger.Log4net.Log4NetExtensions.AddLog4Net(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            将模块服务添加到依赖注入服务容器中
+            </summary>
+            <param name="services"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Amm.AspNetCore.Logger.Log4net.Log4NetLogger">
+            <inheritdoc />
+            <summary>
+             log4net日志记录
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.Logger.Log4net.Log4NetLogger.#ctor(System.String,System.String)">
+            <summary>
+            Log4NetLogger
+            </summary>
+            <param name="loggerRepository"></param>
+            <param name="name"></param>
+        </member>
+        <member name="M:Amm.AspNetCore.Logger.Log4net.Log4NetLogger.Log``1(Microsoft.Extensions.Logging.LogLevel,Microsoft.Extensions.Logging.EventId,``0,System.Exception,System.Func{``0,System.Exception,System.String})">
+            <summary>Writes a log entry.</summary>
+            <param name="logLevel">日志级别，将按这个级别写不同的日志</param>
+            <param name="eventId">事件编号.</param>
+            <param name="state">The entry to be written. Can be also an object.</param>
+            <param name="exception">The exception related to this entry.</param>
+            <param name="formatter">Function to create a <c>string</c> message of the <paramref name="state" /> and <paramref name="exception" />.</param>
+        </member>
+        <member name="M:Amm.AspNetCore.Logger.Log4net.Log4NetLogger.IsEnabled(Microsoft.Extensions.Logging.LogLevel)">
+            <summary>
+             Checks if the given <paramref name="logLevel" /> is enabled.
+            </summary>
+            <param name="logLevel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amm.AspNetCore.Logger.Log4net.Log4NetLogger.BeginScope``1(``0)">
+            <summary>Begins a logical operation scope.</summary>
+            <param name="state">The identifier for the scope.</param>
+            <returns>An IDisposable that ends the logical operation scope on dispose.</returns>
+        </member>
+        <member name="T:Amm.AspNetCore.Logger.Log4net.Log4NetLoggerProvider">
+            <summary>
+            log4net 日志对象提供者
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.Logger.Log4net.Log4NetLoggerProvider.#ctor">
+            <summary>
+            初始化一个<see cref="T:Amm.AspNetCore.Logger.Log4net.Log4NetLoggerProvider"/>类型的新实例
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.Logger.Log4net.Log4NetLoggerProvider.#ctor(System.String)">
+            <summary>
+            初始化一个<see cref="T:Amm.AspNetCore.Logger.Log4net.Log4NetLoggerProvider"/>类型的新实例
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.Logger.Log4net.Log4NetLoggerProvider.CreateLogger(System.String)">
+            <summary>
+            创建一个 <see cref="T:Microsoft.Extensions.Logging.ILogger" /> 的新实例
+            </summary>
+            <param name="categoryName">记录器生成的消息的类别名称。</param>
+            <returns>日志实例</returns>
+        </member>
+        <member name="M:Amm.AspNetCore.Logger.Log4net.Log4NetLoggerProvider.GetCallingAssemblyFromStartup">
+            <summary>
+              获取获程序集通过启动项
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Amm.AspNetCore.Logger.Log4net.Log4NetLoggerProvider.Dispose(System.Boolean)">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="M:Amm.AspNetCore.Logger.Log4net.Log4NetLoggerProvider.Dispose">
+            <summary>Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.</summary>
+        </member>
+        <member name="T:Amm.AspNetCore.MongoDbs.IEntity">
+            <summary>
+            IEntity  
+            </summary>
+        </member>
+        <member name="P:Amm.AspNetCore.MongoDbs.IEntity.Id">
+            <summary>
+             主键Id
+            </summary>
+        </member>
+        <member name="T:Amm.AspNetCore.MongoDbs.IMongoDbContext`1">
+            <summary>
+              非关系性数据库数据库上下文接口
+            </summary>
+        </member>
+        <member name="P:Amm.AspNetCore.MongoDbs.IMongoDbContext`1.MongoCollection">
+            <summary>
+            集合对象
+            </summary>
+        </member>
+        <member name="T:Amm.AspNetCore.MongoDbs.INoSqlRepository`1">
+            <summary>
+              非关系型数据库仓储接口
+            </summary>
+        </member>
+        <member name="T:Amm.AspNetCore.MongoDbs.MongoDbCollectionAttribute">
+            <summary>
+              芒果数据库表属性标签
+            </summary>
+        </member>
+        <member name="P:Amm.AspNetCore.MongoDbs.MongoDbCollectionAttribute.CollectionName">
+            <summary>
+            CollectionName
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.MongoDbs.MongoDbCollectionAttribute.#ctor(System.String)">
+             <summary>
+            MongoDbCollectionAttribute
+             </summary>
+             <param name="collectionName"></param>
+        </member>
+        <member name="T:Amm.AspNetCore.MongoDbs.MongoDbContext`1">
+            <summary>
+             芒果数据库对象上下文
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.MongoDbs.MongoDbContext`1.#ctor(Microsoft.Extensions.Options.IOptions{Amm.AspNetCore.MongoDbs.MongoDbOptions})">
+            <summary>
+            MongoDbContext
+            </summary>
+            <param name="option"></param>
+        </member>
+        <member name="P:Amm.AspNetCore.MongoDbs.MongoDbContext`1._collectionName">
+            <summary>
+             集合名字
+            </summary>
+        </member>
+        <member name="P:Amm.AspNetCore.MongoDbs.MongoDbContext`1.MongoCollection">
+            <summary>
+              获取集合对象
+            </summary>
+        </member>
+        <member name="T:Amm.AspNetCore.MongoDbs.MongoDbExtensions">
+            <summary>
+              芒果数据库模块
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.MongoDbs.MongoDbExtensions.AddMongoDb(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Amm.AspNetCore.MongoDbs.MongoDbOptions})">
+            <summary>
+              使用芒果数据库
+            </summary>
+            <param name="services"></param>
+            <param name="options"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Amm.AspNetCore.MongoDbs.MongoDbOptions">
+            <summary>
+             芒果数据库配置项
+            </summary>
+        </member>
+        <member name="P:Amm.AspNetCore.MongoDbs.MongoDbOptions.UserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:Amm.AspNetCore.MongoDbs.MongoDbOptions.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:Amm.AspNetCore.MongoDbs.MongoDbOptions.ConnectionString">
+            <summary>
+              数据库连接
+            </summary>
+        </member>
+        <member name="P:Amm.AspNetCore.MongoDbs.MongoDbOptions.IsEnabledAuthorization">
+            <summary>
+              是否开启验证
+            </summary>
+        </member>
+        <member name="P:Amm.AspNetCore.MongoDbs.MongoDbOptions.DataBase">
+            <summary>
+              数据库
+            </summary>
+        </member>
+        <member name="T:Amm.AspNetCore.MongoDbs.MongoRepository`1">
+            <summary>
+                芒果数据库仓储
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.MongoDbs.MongoRepository`1.InsertAsync(`0)">
+            <summary>
+             InsertAsync
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amm.AspNetCore.MongoDbs.MongoRepository`1.InsertAsync(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            InsertAsync
+            </summary>
+            <param name="entities"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amm.AspNetCore.MongoDbs.MongoRepository`1.GetAsync(System.Object)">
+            <summary>
+            GetAsync
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amm.AspNetCore.MongoDbs.MongoRepository`1.GetAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            GetAsync
+            </summary>
+            <param name="ipredicatesExpression"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amm.AspNetCore.MongoDbs.MongoRepository`1.DeleteAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Object}},System.Object)">
+            <summary>
+             DeleteAsync
+            </summary>
+            <param name="ipredicatesExpression">表达式</param>
+            <param name="value">值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Amm.AspNetCore.MongoDbs.MongoRepository`1.UpdateAsync(`0)">
+            <summary>
+            UpdateAsync
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amm.AspNetCore.MongoDbs.MongoRepository`1.UpdateAsync(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            UpdateAsync
+            </summary>
+            <param name="entities"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amm.AspNetCore.MongoDbs.MongoRepository`1.FindAllAsync">
+            <summary>
+            FindAllAsync
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Amm.AspNetCore.MongoDbs.MongoRepository`1.FindFilterAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+             FindFilterAsync
+            </summary>
+            <param name="predicateExpression"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Amm.AspNetCore.Mvc.VerifyCodeHandler">
+            <summary>
+                验证码处理类
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.Mvc.VerifyCodeHandler.CheckCode(System.String,System.String,System.Boolean)">
+            <summary>
+                校验验证码有效性
+            </summary>
+            <param name="code">要校验的验证码</param>
+            <param name="id">验证码编号</param>
+            <param name="removeIfSuccess">验证成功时是否移除</param>
+            <returns></returns>
+        </member>
+        <member name="M:Amm.AspNetCore.Mvc.VerifyCodeHandler.SetCode(System.String,System.String@)">
+            <summary>
+                设置验证码到Session中
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.Mvc.VerifyCodeHandler.GetImageString(System.Drawing.Image,System.String)">
+            <summary>
+                将图片序列化成字符串
+            </summary>
+        </member>
+        <member name="T:Amm.AspNetCore.Mvc.Exceptions.CustomExceptionHandlerOptions">
+            <summary>
+              自定义异常处理选项配置
+            </summary>
+        </member>
+        <member name="P:Amm.AspNetCore.Mvc.Exceptions.CustomExceptionHandlerOptions.Environment">
+            <summary>
+             环境变量
+            </summary>
+        </member>
+        <member name="P:Amm.AspNetCore.Mvc.Exceptions.CustomExceptionHandlerOptions.ExceptionHandlingPath">
+            <summary>
+             异常处理页面
+            </summary>
+        </member>
+        <member name="P:Amm.AspNetCore.Mvc.Exceptions.CustomExceptionHandlerOptions.ExceptionHandler">
+            <summary>
+             异常处理
+            </summary>
+        </member>
+        <member name="T:Amm.AspNetCore.Mvc.Exceptions.CustomExceptionHandlingExtensions">
+            <summary>
+             自定义异常处理类
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.Mvc.Exceptions.CustomExceptionHandlingExtensions.UseCustomExceptionHandler(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.String,Microsoft.AspNetCore.Hosting.IHostingEnvironment)">
+            <summary>
+            从管道捕获同步和异步实例参见 <see cref="T:System.Exception"/> 并生成HTML错误响应。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Amm.AspNetCore.Mvc.Exceptions.CustomExceptionHandlingExtensions.UseCustomExceptionHandler(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.String)">
+            <summary>
+            从管道捕获同步和异步实例参见 <see cref="T:System.Exception"/> 并生成HTML错误响应。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Amm.AspNetCore.Mvc.Exceptions.CustomExceptionHandlingExtensions.UseCustomExceptionHandler(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.Action{Microsoft.AspNetCore.Builder.IApplicationBuilder})">
+            <summary>
+            从管道捕获同步和异步实例参见 <see cref="T:System.Exception"/> 并生成HTML错误响应。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Amm.AspNetCore.Mvc.Exceptions.CustomExceptionHandlingExtensions.UseCustomExceptionHandler(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            从管道捕获同步和异步实例参见 <see cref="T:System.Exception"/> 并生成HTML错误响应。
+            </summary>
+            <returns>操作完成后app</returns>
+        </member>
+        <member name="M:Amm.AspNetCore.Mvc.Exceptions.CustomExceptionHandlingExtensions.UseCustomExceptionHandler(Microsoft.AspNetCore.Builder.IApplicationBuilder,Amm.AspNetCore.Mvc.Exceptions.CustomExceptionHandlerOptions)">
+            <summary>
+            从管道捕获同步和异步实例参见 <see cref="T:System.Exception"/> 并生成HTML错误响应。
+            </summary>
+            <returns>操作完成后app</returns>
+        </member>
+        <member name="T:Amm.AspNetCore.Mvc.Exceptions.ExceptionHandlingMiddleware">
+            <summary>
+            自定义异常处理中间件
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.Mvc.Exceptions.ExceptionHandlingMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Logging.ILoggerFactory,Microsoft.Extensions.Options.IOptions{Amm.AspNetCore.Mvc.Exceptions.CustomExceptionHandlerOptions},Microsoft.Extensions.Options.IOptions{Microsoft.AspNetCore.Mvc.MvcJsonOptions})">
+            <summary>
+            ExceptionHandlingMiddleware
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.Mvc.Exceptions.ExceptionHandlingMiddleware.Invoke(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            执行句柄
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amm.AspNetCore.Mvc.Exceptions.ExceptionHandlingMiddleware.ClearCacheHeaders(System.Object)">
+            <summary>
+              清除缓存头部
+            </summary>
+            <param name="state"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amm.AspNetCore.Mvc.Exceptions.ExceptionHandlingMiddleware.HandleExceptionAsync(Microsoft.AspNetCore.Http.HttpContext,System.String,System.Boolean)">
+            <summary>
+              处理异常
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Amm.AspNetCore.Mvc.Filters.AmmActionFilter">
+            <summary>
+                自定义过滤器
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.Mvc.Filters.AmmActionFilter.#ctor(Microsoft.Extensions.Logging.ILoggerFactory,Microsoft.Extensions.Options.IOptions{Microsoft.AspNetCore.Mvc.MvcJsonOptions})">
+            <summary>
+            AmmActionFilter
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.Mvc.Filters.AmmActionFilter.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)">
+            <summary>
+                执行方法之前
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:Amm.AspNetCore.Mvc.Filters.AmmActionFilter.OnActionExecuted(Microsoft.AspNetCore.Mvc.Filters.ActionExecutedContext)">
+            <summary>
+                执行action之后
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:Amm.AspNetCore.Mvc.Https.AmmStatusCodePagesExtensions">
+            <summary>
+            AmmStatusCodePagesExtensions
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.Mvc.Https.AmmStatusCodePagesExtensions.UseCustomStatusCodePages(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.String)">
+            <summary>
+            添加具有指定处理程序的StatusCodePages中间件，该处理程序检查具有状态代码的响应
+            400至599之间，没有响应体
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Amm.AspNetCore.Mvc.Https.AspNetCoreModuleExtension">
+            <summary>
+            AspNetCore模块
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.Mvc.Https.AspNetCoreModuleExtension.AddAspNetCore(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+              将模块服务添加到依赖注入服务容器中
+            </summary>
+            <param name="services"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Amm.AspNetCore.Mvc.Https.HttpContextExtensions">
+            <summary>
+                HttpContext扩展方法
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.Mvc.Https.HttpContextExtensions.IsAjaxRequest(Microsoft.AspNetCore.Http.HttpRequest)">
+            <summary>
+                确定指定的 HTTP 请求是否为 AJAX 请求。
+            </summary>
+            <returns>
+                如果指定的 HTTP 请求是 AJAX 请求，则为 true；否则为 false。
+            </returns>
+            <param name="request">HTTP 请求。</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="request" /> 参数为 null（在 Visual Basic 中为 Nothing）。</exception>
+        </member>
+        <member name="M:Amm.AspNetCore.Mvc.Https.HttpContextExtensions.IsJsonContextType(Microsoft.AspNetCore.Http.HttpRequest)">
+            <summary>
+                确定指定的 HTTP 请求的 ContextType 是否为 Json 方式
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.Mvc.Https.HttpContextExtensions.Params(Microsoft.AspNetCore.Http.HttpRequest,System.String)">
+            <summary>
+                获取<see cref="T:Microsoft.AspNetCore.Http.HttpRequest" />的请求数据
+            </summary>
+            <param name="request">请求信息</param>
+            <param name="key">要获取数据的键名</param>
+            <returns></returns>
+        </member>
+        <member name="M:Amm.AspNetCore.Mvc.Https.HttpContextExtensions.GetClientIp(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+                获取客户端IP地址
+            </summary>
+        </member>
+        <member name="T:Amm.AspNetCore.Mvc.Https.HttpResponseHelper">
+            <summary>
+                请求体包括器
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.Mvc.Https.HttpResponseHelper.ResponseAsSuccessJson``1(``0,System.String)">
+            <summary>
+              将响应体返回成JSON字符串
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="entity"></param>
+            <param name="message">操作消息</param>
+            <returns></returns>
+        </member>
+        <member name="M:Amm.AspNetCore.Mvc.Https.HttpResponseHelper.ResponseAsErrorJson``1(``0,System.String)">
+            <summary>
+              将响应体返回成JSON字符串
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="entity"></param>
+            <param name="message">操作消息</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amm.AspNetCore.Mvc.Https.HttpResponseWrapper">
+            <summary>
+                响应体包裹器
+            </summary>
+        </member>
+        <member name="P:Amm.AspNetCore.Mvc.Https.HttpResponseWrapper.Code">
+            <summary>
+                代码
+            </summary>
+        </member>
+        <member name="P:Amm.AspNetCore.Mvc.Https.HttpResponseWrapper.Error">
+            <summary>
+             异常信息
+            </summary>
+        </member>
+        <member name="P:Amm.AspNetCore.Mvc.Https.HttpResponseWrapper.Success">
+            <summary>
+             是否成功
+            </summary>
+        </member>
+        <member name="P:Amm.AspNetCore.Mvc.Https.HttpResponseWrapper.Message">
+            <summary>
+                消息
+            </summary>
+        </member>
+        <member name="T:Amm.AspNetCore.Mvc.Https.HttpResponseWrapper`1">
+            <inheritdoc />
+            <summary>
+                响应体
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:Amm.AspNetCore.Mvc.Https.HttpResponseWrapper`1.Result">
+            <summary>
+                结果体
+            </summary>
+        </member>
+        <member name="T:Amm.AspNetCore.Mvc.Https.RequestScopedServiceResolver">
+            <summary>
+                Request的<see cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Scoped" />服务解析器
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.Mvc.Https.RequestScopedServiceResolver.#ctor(Microsoft.AspNetCore.Http.IHttpContextAccessor)">
+            <summary>
+                初始化一个<see cref="T:Amm.AspNetCore.Mvc.Https.RequestScopedServiceResolver" />类型的新实例
+            </summary>
+        </member>
+        <member name="P:Amm.AspNetCore.Mvc.Https.RequestScopedServiceResolver.ResolveEnabled">
+            <summary>
+                获取 是否可解析
+            </summary>
+        </member>
+        <member name="P:Amm.AspNetCore.Mvc.Https.RequestScopedServiceResolver.ScopedProvider">
+            <summary>
+                获取 <see cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Scoped" />生命周期的服务提供者
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.Mvc.Https.RequestScopedServiceResolver.GetService``1">
+            <summary>
+                获取指定服务类型的实例
+            </summary>
+            <typeparam name="T">服务类型</typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Amm.AspNetCore.Mvc.Https.RequestScopedServiceResolver.GetService(System.Type)">
+            <summary>
+                获取指定服务类型的实例
+            </summary>
+            <param name="serviceType">服务类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Amm.AspNetCore.Mvc.Https.RequestScopedServiceResolver.GetServices``1">
+            <summary>
+                获取指定服务类型的所有实例
+            </summary>
+            <typeparam name="T">服务类型</typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Amm.AspNetCore.Mvc.Https.RequestScopedServiceResolver.GetServices(System.Type)">
+            <summary>
+                获取指定服务类型的所有实例
+            </summary>
+            <param name="serviceType">服务类型</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amm.AspNetCore.Mvc.Https.SwaggerUiOptions">
+            <summary>
+            SwaggerUiOptions
+            </summary>
+        </member>
+        <member name="P:Amm.AspNetCore.Mvc.Https.SwaggerUiOptions.SwaggerEndpointUrl">
+            <summary>
+            SwaggerEndpointUrl
+            </summary>
+        </member>
+        <member name="T:Amm.AspNetCore.Mvc.Securities.AmmAuthorizationHandler">
+            <summary>
+            AmmPermissionHandler
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.Mvc.Securities.AmmAuthorizationHandler.#ctor(Microsoft.Extensions.Logging.ILogger{Amm.AspNetCore.Mvc.Securities.AmmAuthorizationHandler},Microsoft.Extensions.Options.IOptions{Amm.AspNetCore.Mvc.Securities.AmmAuthorizationOptions},Amm.AspNetCore.Redis.ICacheService)">
+            <summary>
+            AmmAuthorizationHandlerHandler
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.Mvc.Securities.AmmAuthorizationHandler.HandleAsync(Microsoft.AspNetCore.Authorization.AuthorizationHandlerContext)">
+            <summary>
+            HandleAsync
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amm.AspNetCore.Mvc.Securities.AmmAuthorizationHandler.IsCanAccessWebApiByUserId(System.Security.Claims.ClaimsPrincipal,System.Object)">
+            <summary>
+             是否能访问webapi通过请求上下文中的用户ID
+            </summary>
+            <param name="user"></param>
+            <param name="resource"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Amm.AspNetCore.Mvc.Securities.AmmAuthorizationOptions">
+            <summary>
+            AmmAuthorizationOptions
+            </summary>
+        </member>
+        <member name="P:Amm.AspNetCore.Mvc.Securities.AmmAuthorizationOptions.IsEnableAuthrization">
+            <summary>
+             是否授权
+            </summary>
+        </member>
+        <member name="T:Amm.AspNetCore.Mvc.Securities.AmmAuthorizationPolicyProvider">
+            <summary>
+            AmmAuthorizationPolicyProvider
+            </summary>
+        </member>
+        <member name="P:Amm.AspNetCore.Mvc.Securities.AmmAuthorizationPolicyProvider.FallbackPolicyProvider">
+            <summary>
+            FallbackPolicyProvider
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.Mvc.Securities.AmmAuthorizationPolicyProvider.#ctor(Microsoft.Extensions.Options.IOptions{Microsoft.AspNetCore.Authorization.AuthorizationOptions})">
+            <summary>
+            AmmAuthorizationPolicyProvider
+            </summary>
+            <param name="options"></param>
+        </member>
+        <member name="M:Amm.AspNetCore.Mvc.Securities.AmmAuthorizationPolicyProvider.GetPolicyAsync(System.String)">
+            <summary>
+             GetPolicyAsync
+            </summary>
+            <param name="policyName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amm.AspNetCore.Mvc.Securities.AmmAuthorizationPolicyProvider.GetDefaultPolicyAsync">
+            <summary>
+            GetDefaultPolicyAsync
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Amm.AspNetCore.Mvc.Securities.AmmAuthorizationRequirement">
+            <summary>
+            AmmAuthorizationRequirement
+            </summary>
+        </member>
+        <member name="T:Amm.AspNetCore.Mvc.Securities.AmmAuthorizationServiceCollectionExtensions">
+            <summary>
+                AmmAuthorizationExtensions
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.Mvc.Securities.AmmAuthorizationServiceCollectionExtensions.AddAmmAuthorization(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+                Adds authorization services to the specified &lt;see
+                cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" /&gt;.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Amm.AspNetCore.Mvc.Securities.AmmAuthorizationServiceCollectionExtensions.AddAmmAuthorization(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Amm.AspNetCore.Mvc.Securities.AmmAuthorizationOptions})">
+            <summary>
+                Adds authorization services to the specified &lt;see
+                cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" /&gt;.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Amm.AspNetCore.Mvc.Securities.AmmModuleAuthorizeAttribute">
+            <summary>
+                模块授权属性标签
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.Mvc.Securities.AmmModuleAuthorizeAttribute.#ctor(System.String)">
+            <summary>
+                AmmMudleAttribute
+            </summary>
+            <param name="moduleName">模块名称，控制器名称</param>
+        </member>
+        <member name="M:Amm.AspNetCore.Mvc.Securities.AmmModuleAuthorizeAttribute.#ctor(System.Boolean)">
+            <summary>
+             AmmMudleAttribute
+            </summary>
+        </member>
+        <member name="P:Amm.AspNetCore.Mvc.Securities.AmmModuleAuthorizeAttribute.ModuleName">
+            <summary>
+                名字
+            </summary>
+        </member>
+        <member name="P:Amm.AspNetCore.Mvc.Securities.AmmModuleAuthorizeAttribute.LoginOnly">
+            <summary>
+             仅仅需要登录权限即可
+            </summary>
+        </member>
+        <member name="T:Amm.AspNetCore.Mvc.Securities.AmmSession">
+            <summary>
+             http会话集成器
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.Mvc.Securities.AmmSession.#ctor(Microsoft.AspNetCore.Http.IHttpContextAccessor)">
+            <summary>
+            AmmSession
+            </summary>
+            <param name="httpContextAccessor"></param>
+        </member>
+        <member name="P:Amm.AspNetCore.Mvc.Securities.AmmSession.UserId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:Amm.AspNetCore.Mvc.Securities.AmmSession.HeadPortrait">
+            <summary>
+             头像
+            </summary>
+        </member>
+        <member name="P:Amm.AspNetCore.Mvc.Securities.AmmSession.UserName">
+            <summary>
+             用户名
+            </summary>
+        </member>
+        <member name="P:Amm.AspNetCore.Mvc.Securities.AmmSession.RealName">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:Amm.AspNetCore.Mvc.Securities.AmmSession.TelPhone">
+            <summary>
+             电话号码
+            </summary>
+        </member>
+        <member name="P:Amm.AspNetCore.Mvc.Securities.AmmSession.RoleName">
+            <summary>
+             角色名字
+            </summary>
+        </member>
+        <member name="P:Amm.AspNetCore.Mvc.Securities.AmmSession.CompanyName">
+            <summary>
+            公司名字
+            </summary>
+        </member>
+        <member name="P:Amm.AspNetCore.Mvc.Securities.AmmSession.Email">
+            <summary>
+             邮箱
+            </summary>
+        </member>
+        <member name="T:Amm.AspNetCore.Mvc.Securities.IAmmSession">
+            <summary>
+            IAmmSession
+            </summary>
+        </member>
+        <member name="P:Amm.AspNetCore.Mvc.Securities.IAmmSession.UserId">
+            <summary>
+             用户ID
+            </summary>
+        </member>
+        <member name="P:Amm.AspNetCore.Mvc.Securities.IAmmSession.HeadPortrait">
+            <summary>
+             头像
+            </summary>
+        </member>
+        <member name="P:Amm.AspNetCore.Mvc.Securities.IAmmSession.UserName">
+            <summary>
+              用户名
+            </summary>
+        </member>
+        <member name="P:Amm.AspNetCore.Mvc.Securities.IAmmSession.RealName">
+            <summary>
+             姓名
+            </summary>
+        </member>
+        <member name="P:Amm.AspNetCore.Mvc.Securities.IAmmSession.TelPhone">
+            <summary>
+             电话号码
+            </summary>
+        </member>
+        <member name="P:Amm.AspNetCore.Mvc.Securities.IAmmSession.RoleName">
+            <summary>
+             角色
+            </summary>
+        </member>
+        <member name="P:Amm.AspNetCore.Mvc.Securities.IAmmSession.CompanyName">
+            <summary>
+             公司名称
+            </summary>
+        </member>
+        <member name="P:Amm.AspNetCore.Mvc.Securities.IAmmSession.Email">
+            <summary>
+             邮箱
+            </summary>
+        </member>
+        <member name="T:Amm.AspNetCore.Redis.ICacheService">
+            <summary>
+            ICacheService
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.Redis.ICacheService.AddCacheAsync``1(System.String,``0,System.Nullable{System.Int32})">
+            <summary>
+            添加缓存
+            </summary>
+            <param name="key">缓存key</param>
+            <param name="value">缓存值</param>
+            <param name="expirationTime">绝对过期时间(毫秒)</param>
+        </member>
+        <member name="M:Amm.AspNetCore.Redis.ICacheService.GetCacheWithTAsync``1(System.String)">
+            <summary>
+            GetCacheWithTAsync
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amm.AspNetCore.Redis.ICacheService.GetCacheAsync(System.String)">
+            <summary>
+            获取缓存
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Amm.AspNetCore.Redis.ICacheService.RemoveCacheAsync(System.String)">
+            <summary>
+              移除缓存
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amm.AspNetCore.Redis.ICacheService.PubLishMessageAsync(System.String,System.String)">
+            <summary>
+              发布消息
+            </summary>
+            <param name="channelName"></param>
+            <param name="message"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Amm.AspNetCore.Redis.IRedisCacheContext">
+            <summary>
+             IRedisCacheContext
+            </summary>
+        </member>
+        <member name="P:Amm.AspNetCore.Redis.IRedisCacheContext.RedisDatabase">
+            <summary>
+            RedisDatabase
+            </summary>
+        </member>
+        <member name="P:Amm.AspNetCore.Redis.IRedisCacheContext.RedisMultiplexer">
+            <summary>
+            RedisMultiplexer
+            </summary>
+        </member>
+        <member name="T:Amm.AspNetCore.Redis.RedisCacheContext">
+            <summary>
+              redis数据库上下文
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.Redis.RedisCacheContext.#ctor(Microsoft.Extensions.Options.IOptions{Amm.AspNetCore.Redis.RedisOptions})">
+            <summary>
+            RedisCache
+            </summary>
+        </member>
+        <member name="P:Amm.AspNetCore.Redis.RedisCacheContext.RedisDatabase">
+            <summary>
+            RedisDatabase
+            </summary>
+        </member>
+        <member name="P:Amm.AspNetCore.Redis.RedisCacheContext.RedisMultiplexer">
+            <summary>
+             RedisMultiplexer
+            </summary>
+        </member>
+        <member name="T:Amm.AspNetCore.Redis.RedisCacheService">
+            <summary>
+                缓存服务
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.Redis.RedisCacheService.#ctor(Amm.AspNetCore.Redis.IRedisCacheContext)">
+            <summary>
+            RedisCacheService
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.Redis.RedisCacheService.AddCacheAsync``1(System.String,``0,System.Nullable{System.Int32})">
+            <summary>
+             添加
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+            <param name="expirationTime">绝对过期时间(毫秒)</param>
+        </member>
+        <member name="M:Amm.AspNetCore.Redis.RedisCacheService.GetCacheWithTAsync``1(System.String)">
+            <summary>
+            获取缓存
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amm.AspNetCore.Redis.RedisCacheService.GetCacheAsync(System.String)">
+            <summary>
+             获取缓存
+            </summary>
+            <param name="key">redis键值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Amm.AspNetCore.Redis.RedisCacheService.RemoveCacheAsync(System.String)">
+            <summary>
+             移除缓存
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amm.AspNetCore.Redis.RedisCacheService.PubLishMessageAsync(System.String,System.String)">
+            <summary>
+              发布消息
+            </summary>
+            <param name="channelName"></param>
+            <param name="message"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Amm.AspNetCore.Redis.RedisExtensions">
+            <summary>
+              redis缓存模块
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.Redis.RedisExtensions.AddRedis(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Amm.AspNetCore.Redis.RedisOptions})">
+            <summary>
+             使用redis缓存
+            </summary>
+            <param name="services"></param>
+            <param name="options"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Amm.AspNetCore.Redis.RedisOptions">
+            <summary>
+            RedisOptions
+            </summary>
+        </member>
+        <member name="P:Amm.AspNetCore.Redis.RedisOptions.ConnectionString">
+            <summary>
+              数据库连接字符串
+            </summary>
+        </member>
+        <member name="P:Amm.AspNetCore.Redis.RedisOptions.DataBaseIndex">
+            <summary>
+              数据库索引
+            </summary>
+        </member>
+        <member name="T:Amm.AspNetCore.TypeFinders.AppDomainTypeFinder">
+            <summary>
+              应用程序域类型查找器
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.TypeFinders.AppDomainTypeFinder.AddAssembliesInAppDomain(System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.Reflection.Assembly})">
+            <summary>
+                Iterates all assemblies in the AppDomain and if it's name matches the configured patterns add it to our list.
+            </summary>
+            <param name="addedAssemblyNames"></param>
+            <param name="assemblies"></param>
+        </member>
+        <member name="M:Amm.AspNetCore.TypeFinders.AppDomainTypeFinder.AddConfiguredAssemblies(System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.Reflection.Assembly})">
+            <summary>
+                Adds specifically configured assemblies.
+            </summary>
+            <param name="addedAssemblyNames"></param>
+            <param name="assemblies"></param>
+        </member>
+        <member name="M:Amm.AspNetCore.TypeFinders.AppDomainTypeFinder.Matches(System.String)">
+            <summary>
+                Check if a dll is one of the shipped dlls that we know don't need to be investigated.
+            </summary>
+            <param name="assemblyFullName">
+                The name of the assembly to check.
+            </param>
+            <returns>
+                True if the assembly should be loaded into Nop.
+            </returns>
+        </member>
+        <member name="M:Amm.AspNetCore.TypeFinders.AppDomainTypeFinder.Matches(System.String,System.String)">
+            <summary>
+                Check if a dll is one of the shipped dlls that we know don't need to be investigated.
+            </summary>
+            <param name="assemblyFullName">
+                The assembly name to match.
+            </param>
+            <param name="pattern">
+                The regular expression pattern to match against the assembly name.
+            </param>
+            <returns>
+                True if the pattern matches the assembly name.
+            </returns>
+        </member>
+        <member name="M:Amm.AspNetCore.TypeFinders.AppDomainTypeFinder.LoadMatchingAssemblies(System.String)">
+            <summary>
+                Makes sure matching assemblies in the supplied folder are loaded in the app domain.
+            </summary>
+            <param name="directoryPath">
+                The physical path to a directory containing dlls to load in the app domain.
+            </param>
+        </member>
+        <member name="M:Amm.AspNetCore.TypeFinders.AppDomainTypeFinder.DoesTypeImplementOpenGeneric(System.Type,System.Type)">
+            <summary>
+                Does type implement generic?
+            </summary>
+            <param name="type"></param>
+            <param name="openGeneric"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amm.AspNetCore.TypeFinders.AppDomainTypeFinder.FindClassesOfType``1(System.Boolean)">
+            <summary>
+                Find classes of type
+            </summary>
+            <typeparam name="T">Type</typeparam>
+            <param name="onlyConcreteClasses">A value indicating whether to find only concrete classes</param>
+            <returns>Result</returns>
+        </member>
+        <member name="M:Amm.AspNetCore.TypeFinders.AppDomainTypeFinder.FindClassesOfType(System.Type,System.Boolean)">
+            <summary>
+                Find classes of type
+            </summary>
+            <param name="assignTypeFrom">Assign type from</param>
+            <param name="onlyConcreteClasses">A value indicating whether to find only concrete classes</param>
+            <returns>Result</returns>
+            <returns></returns>
+        </member>
+        <member name="M:Amm.AspNetCore.TypeFinders.AppDomainTypeFinder.FindClassesOfType``1(System.Collections.Generic.IEnumerable{System.Reflection.Assembly},System.Boolean)">
+            <summary>
+                Find classes of type
+            </summary>
+            <typeparam name="T">Type</typeparam>
+            <param name="assemblies">Assemblies</param>
+            <param name="onlyConcreteClasses">A value indicating whether to find only concrete classes</param>
+            <returns>Result</returns>
+        </member>
+        <member name="M:Amm.AspNetCore.TypeFinders.AppDomainTypeFinder.FindClassesOfType(System.Type,System.Collections.Generic.IEnumerable{System.Reflection.Assembly},System.Boolean)">
+            <summary>
+                Find classes of type
+            </summary>
+            <param name="assignTypeFrom">Assign type from</param>
+            <param name="assemblies">Assemblies</param>
+            <param name="onlyConcreteClasses">A value indicating whether to find only concrete classes</param>
+            <returns>Result</returns>
+        </member>
+        <member name="M:Amm.AspNetCore.TypeFinders.AppDomainTypeFinder.GetAssemblies">
+            <summary>
+                Gets the assemblies related to the current implementation.
+            </summary>
+            <returns>A list of assemblies</returns>
+        </member>
+        <member name="P:Amm.AspNetCore.TypeFinders.AppDomainTypeFinder.App">
+            <summary>The app domain to look for types in.</summary>
+        </member>
+        <member name="P:Amm.AspNetCore.TypeFinders.AppDomainTypeFinder.LoadAppDomainAssemblies">
+            <summary>
+                Gets or sets whether Nop should iterate assemblies in the app domain when loading Nop types. Loading patterns
+                are applied when loading these assemblies.
+            </summary>
+        </member>
+        <member name="P:Amm.AspNetCore.TypeFinders.AppDomainTypeFinder.AssemblyNames">
+            <summary>Gets or sets assemblies loaded a startup in addition to those loaded in the AppDomain.</summary>
+        </member>
+        <member name="P:Amm.AspNetCore.TypeFinders.AppDomainTypeFinder.AssemblySkipLoadingPattern">
+            <summary>Gets the pattern for dlls that we know don't need to be investigated.</summary>
+        </member>
+        <member name="P:Amm.AspNetCore.TypeFinders.AppDomainTypeFinder.AssemblyRestrictToLoadingPattern">
+            <summary>
+                Gets or sets the pattern for dll that will be investigated. For ease of use this defaults to match all but to
+                increase performance you might want to configure a pattern that includes assemblies and your own.
+            </summary>
+            <remarks>
+                If you change this so that Nop assemblies aren't investigated (e.g. by not including something like "^Nop|..."
+                you may break core functionality.
+            </remarks>
+        </member>
+        <member name="T:Amm.AspNetCore.TypeFinders.AttributeTypeFinderBase`1">
+            <summary>
+              属性查找基类
+            </summary>
+            <typeparam name="TAttribute"></typeparam>
+        </member>
+        <member name="M:Amm.AspNetCore.TypeFinders.AttributeTypeFinderBase`1.#ctor(Amm.AspNetCore.TypeFinders.ITypeFinder)">
+            <summary>
+            AttributeTypeFinderBase
+            </summary>
+            <param name="finder"></param>
+        </member>
+        <member name="M:Amm.AspNetCore.TypeFinders.AttributeTypeFinderBase`1.FindAttributeClassItems">
+            <summary>
+             查找所有项
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Amm.AspNetCore.TypeFinders.IFinder">
+            <summary>
+              查找器
+            </summary>
+        </member>
+        <member name="T:Amm.AspNetCore.TypeFinders.ITypeFinder">
+            <summary>
+              类型查找器
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.TypeFinders.ITypeFinder.FindClassesOfType``1(System.Boolean)">
+            <summary>
+                Find classes of type
+            </summary>
+            <typeparam name="T">Type</typeparam>
+            <param name="onlyConcreteClasses">A value indicating whether to find only concrete classes</param>
+            <returns>Result</returns>
+        </member>
+        <member name="M:Amm.AspNetCore.TypeFinders.ITypeFinder.FindClassesOfType(System.Type,System.Boolean)">
+            <summary>
+                Find classes of type
+            </summary>
+            <param name="assignTypeFrom">Assign type from</param>
+            <param name="onlyConcreteClasses">A value indicating whether to find only concrete classes</param>
+            <returns>Result</returns>
+            <returns></returns>
+        </member>
+        <member name="M:Amm.AspNetCore.TypeFinders.ITypeFinder.FindClassesOfType``1(System.Collections.Generic.IEnumerable{System.Reflection.Assembly},System.Boolean)">
+            <summary>
+                Find classes of type
+            </summary>
+            <typeparam name="T">Type</typeparam>
+            <param name="assemblies">Assemblies</param>
+            <param name="onlyConcreteClasses">A value indicating whether to find only concrete classes</param>
+            <returns>Result</returns>
+        </member>
+        <member name="M:Amm.AspNetCore.TypeFinders.ITypeFinder.FindClassesOfType(System.Type,System.Collections.Generic.IEnumerable{System.Reflection.Assembly},System.Boolean)">
+            <summary>
+                Find classes of type
+            </summary>
+            <param name="assignTypeFrom">Assign type from</param>
+            <param name="assemblies">Assemblies</param>
+            <param name="onlyConcreteClasses">A value indicating whether to find only concrete classes</param>
+            <returns>Result</returns>
+        </member>
+        <member name="M:Amm.AspNetCore.TypeFinders.ITypeFinder.GetAssemblies">
+            <summary>
+                Gets the assemblies related to the current implementation.
+            </summary>
+            <returns>A list of assemblies</returns>
+        </member>
+        <member name="T:Amm.AspNetCore.TypeFinders.TypeExtensions">
+            <summary>
+                类型<see cref="T:System.Type" />辅助扩展方法类
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.TypeFinders.TypeExtensions.IsDeriveClassFrom``1(System.Type,System.Boolean)">
+            <summary>
+                判断当前类型是否可由指定类型派生
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.TypeFinders.TypeExtensions.IsDeriveClassFrom(System.Type,System.Type,System.Boolean)">
+            <summary>
+                判断当前类型是否可由指定类型派生
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.TypeFinders.TypeExtensions.IsNullableType(System.Type)">
+            <summary>
+                判断类型是否为Nullable类型
+            </summary>
+            <param name="type"> 要处理的类型 </param>
+            <returns> 是返回True，不是返回False </returns>
+        </member>
+        <member name="M:Amm.AspNetCore.TypeFinders.TypeExtensions.GetNonNummableType(System.Type)">
+            <summary>
+                由类型的Nullable类型返回实际类型
+            </summary>
+            <param name="type"> 要处理的类型对象 </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Amm.AspNetCore.TypeFinders.TypeExtensions.GetUnNullableType(System.Type)">
+            <summary>
+                通过类型转换器获取Nullable类型的基础类型
+            </summary>
+            <param name="type"> 要处理的类型对象 </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Amm.AspNetCore.TypeFinders.TypeExtensions.GetDescription(System.Type,System.Boolean)">
+            <summary>
+                获取类型的Description特性描述信息
+            </summary>
+            <param name="type">类型对象</param>
+            <param name="inherit">是否搜索类型的继承链以查找描述特性</param>
+            <returns>返回Description特性描述信息，如不存在则返回类型的全名</returns>
+        </member>
+        <member name="M:Amm.AspNetCore.TypeFinders.TypeExtensions.GetDescription(System.Reflection.MemberInfo,System.Boolean)">
+            <summary>
+                获取成员元数据的Description特性描述信息
+            </summary>
+            <param name="member">成员元数据对象</param>
+            <param name="inherit">是否搜索成员的继承链以查找描述特性</param>
+            <returns>返回Description特性描述信息，如不存在则返回成员的名称</returns>
+        </member>
+        <member name="M:Amm.AspNetCore.TypeFinders.TypeExtensions.HasAttribute``1(System.Reflection.MemberInfo,System.Boolean)">
+            <summary>
+                检查指定指定类型成员中是否存在指定的Attribute特性
+            </summary>
+            <typeparam name="T">要检查的Attribute特性类型</typeparam>
+            <param name="memberInfo">要检查的类型成员</param>
+            <param name="inherit">是否从继承中查找</param>
+            <returns>是否存在</returns>
+        </member>
+        <member name="M:Amm.AspNetCore.TypeFinders.TypeExtensions.GetAttribute``1(System.Reflection.MemberInfo,System.Boolean)">
+            <summary>
+                从类型成员获取指定Attribute特性
+            </summary>
+            <typeparam name="T">Attribute特性类型</typeparam>
+            <param name="memberInfo">类型类型成员</param>
+            <param name="inherit">是否从继承中查找</param>
+            <returns>存在返回第一个，不存在返回null</returns>
+        </member>
+        <member name="M:Amm.AspNetCore.TypeFinders.TypeExtensions.GetAttributes``1(System.Reflection.MemberInfo,System.Boolean)">
+            <summary>
+                从类型成员获取指定Attribute特性
+            </summary>
+            <typeparam name="T">Attribute特性类型</typeparam>
+            <param name="memberInfo">类型类型成员</param>
+            <param name="inherit">是否从继承中查找</param>
+            <returns>返回所有指定Attribute特性的数组</returns>
+        </member>
+        <member name="M:Amm.AspNetCore.TypeFinders.TypeExtensions.IsEnumerable(System.Type)">
+            <summary>
+                判断类型是否为集合类型
+            </summary>
+            <param name="type">要处理的类型</param>
+            <returns>是返回True，不是返回False</returns>
+        </member>
+        <member name="M:Amm.AspNetCore.TypeFinders.TypeExtensions.IsGenericAssignableFrom(System.Type,System.Type)">
+            <summary>
+                判断当前泛型类型是否可由指定类型的实例填充
+            </summary>
+            <param name="genericType">泛型类型</param>
+            <param name="type">指定类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Amm.AspNetCore.TypeFinders.TypeExtensions.IsAsync(System.Reflection.MethodInfo)">
+            <summary>
+                方法是否是异步
+            </summary>
+        </member>
+        <member name="M:Amm.AspNetCore.TypeFinders.TypeExtensions.IsBaseOn(System.Type,System.Type)">
+            <summary>
+                返回当前类型是否是指定基类的派生类
+            </summary>
+            <param name="type">当前类型</param>
+            <param name="baseType">要判断的基类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Amm.AspNetCore.TypeFinders.TypeExtensions.IsBaseOn``1(System.Type)">
+            <summary>
+                返回当前类型是否是指定基类的派生类
+            </summary>
+            <typeparam name="TBaseType">要判断的基类型</typeparam>
+            <param name="type">当前类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Amm.AspNetCore.TypeFinders.TypeExtensions.GetFullNameWithModule(System.Type)">
+            <summary>
+                获取类型的全名，附带所在类库
+            </summary>
+        </member>
+        <member name="T:Amm.NetworkMark.Domain.Common.IChecked">
+            <summary>
+             是否选中
+            </summary>
+        </member>
+        <member name="T:Amm.NetworkMark.Domain.Common.IEntity`1">
+            <summary>
+                IEntity
+            </summary>
+            <typeparam name="TPrimaryKey"></typeparam>
+        </member>
+        <member name="P:Amm.NetworkMark.Domain.Common.IEntity`1.Id">
+            <summary>
+                Id
+            </summary>
+        </member>
+        <member name="T:Amm.NetworkMark.Domain.Common.ISoftDelete">
+            <summary>
+             软删除
+            </summary>
+        </member>
+        <member name="P:Amm.NetworkMark.Domain.Common.ISoftDelete.IsDeleted">
+            <summary>
+            是否删除
+            </summary>
+        </member>
+        <member name="T:Amm.NetworkMark.Core.Extentions.StringExtensions">
+            <summary>
+                字符串<see cref="T:System.String" />类型的扩展辅助操作类
+            </summary>
+        </member>
+        <member name="M:Amm.NetworkMark.Core.Extentions.StringExtensions.IsMatch(System.String,System.String,System.Boolean)">
+            <summary>
+                指示所指定的正则表达式在指定的输入字符串中是否找到了匹配项
+            </summary>
+            <param name="value">要搜索匹配项的字符串</param>
+            <param name="pattern">要匹配的正则表达式模式</param>
+            <param name="isContains">是否包含，否则全匹配</param>
+            <returns>如果正则表达式找到匹配项，则为 true；否则，为 false</returns>
+        </member>
+        <member name="M:Amm.NetworkMark.Core.Extentions.StringExtensions.Match(System.String,System.String)">
+            <summary>
+                在指定的输入字符串中搜索指定的正则表达式的第一个匹配项
+            </summary>
+            <param name="value">要搜索匹配项的字符串</param>
+            <param name="pattern">要匹配的正则表达式模式</param>
+            <returns>一个对象，包含有关匹配项的信息</returns>
+        </member>
+        <member name="M:Amm.NetworkMark.Core.Extentions.StringExtensions.Matches(System.String,System.String)">
+            <summary>
+                在指定的输入字符串中搜索指定的正则表达式的所有匹配项的字符串集合
+            </summary>
+            <param name="value"> 要搜索匹配项的字符串 </param>
+            <param name="pattern"> 要匹配的正则表达式模式 </param>
+            <returns> 一个集合，包含有关匹配项的字符串值 </returns>
+        </member>
+        <member name="M:Amm.NetworkMark.Core.Extentions.StringExtensions.MatchFirstNumber(System.String)">
+            <summary>
+                在指定的输入字符串中匹配第一个数字字符串
+            </summary>
+        </member>
+        <member name="M:Amm.NetworkMark.Core.Extentions.StringExtensions.MatchLastNumber(System.String)">
+            <summary>
+                在指定字符串中匹配最后一个数字字符串
+            </summary>
+        </member>
+        <member name="M:Amm.NetworkMark.Core.Extentions.StringExtensions.MatchNumbers(System.String)">
+            <summary>
+                在指定字符串中匹配所有数字字符串
+            </summary>
+        </member>
+        <member name="M:Amm.NetworkMark.Core.Extentions.StringExtensions.IsMatchNumber(System.String)">
+            <summary>
+                检测指定字符串中是否包含数字
+            </summary>
+        </member>
+        <member name="M:Amm.NetworkMark.Core.Extentions.StringExtensions.IsMatchNumber(System.String,System.Int32)">
+            <summary>
+                检测指定字符串是否全部为数字并且长度等于指定长度
+            </summary>
+        </member>
+        <member name="M:Amm.NetworkMark.Core.Extentions.StringExtensions.Substring(System.String,System.String,System.String[])">
+            <summary>
+                截取指定字符串之间的字符串
+            </summary>
+            <param name="source"></param>
+            <param name="startString">起始字符串</param>
+            <param name="endStrings">结束字符串，可多个</param>
+            <returns>返回的中间字符串</returns>
+        </member>
+        <member name="M:Amm.NetworkMark.Core.Extentions.StringExtensions.Substring2(System.String,System.String,System.String)">
+            <summary>
+                用正则表达式截取字符串
+            </summary>
+        </member>
+        <member name="M:Amm.NetworkMark.Core.Extentions.StringExtensions.Substring2(System.String,System.String,System.String,System.Boolean)">
+            <summary>
+                用正则表达式截取字符串
+            </summary>
+        </member>
+        <member name="M:Amm.NetworkMark.Core.Extentions.StringExtensions.IsEmail(System.String)">
+            <summary>
+                是否电子邮件
+            </summary>
+        </member>
+        <member name="M:Amm.NetworkMark.Core.Extentions.StringExtensions.IsIpAddress(System.String)">
+            <summary>
+                是否是IP地址
+            </summary>
+        </member>
+        <member name="M:Amm.NetworkMark.Core.Extentions.StringExtensions.IsNumeric(System.String)">
+            <summary>
+                是否是整数
+            </summary>
+        </member>
+        <member name="M:Amm.NetworkMark.Core.Extentions.StringExtensions.IsUnicode(System.String)">
+            <summary>
+                是否是Unicode字符串
+            </summary>
+        </member>
+        <member name="M:Amm.NetworkMark.Core.Extentions.StringExtensions.IsUrl(System.String)">
+            <summary>
+                是否Url字符串
+            </summary>
+        </member>
+        <member name="M:Amm.NetworkMark.Core.Extentions.StringExtensions.IsIdentityCardId(System.String)">
+            <summary>
+                是否身份证号，验证如下3种情况：
+                1.身份证号码为15位数字；
+                2.身份证号码为18位数字；
+                3.身份证号码为17位数字+1个字母
+            </summary>
+        </member>
+        <member name="M:Amm.NetworkMark.Core.Extentions.StringExtensions.IsMobileNumber(System.String,System.Boolean)">
+            <summary>
+                是否手机号码
+            </summary>
+            <param name="value"></param>
+            <param name="isRestrict">是否按严格格式验证</param>
+        </member>
+        <member name="M:Amm.NetworkMark.Core.Extentions.StringExtensions.IsNullOrEmpty(System.String)">
+            <summary>
+                指示指定的字符串是 null 或者 System.String.Empty 字符串
+            </summary>
+        </member>
+        <member name="M:Amm.NetworkMark.Core.Extentions.StringExtensions.IsNullOrEmpytToValue(System.String,System.String)">
+            <summary>
+            指示指定的字符串是 null 或者 System.String.Empty 字符串如果为空则替换相应的值
+            </summary>
+            <param name="value"></param>
+            <param name="nullReplaceValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amm.NetworkMark.Core.Extentions.StringExtensions.GetPinyin(System.String)">
+            <summary> 
+            汉字转化为拼音
+            </summary> 
+            <param name="str">汉字</param> 
+            <returns>全拼</returns> 
+        </member>
+        <member name="M:Amm.NetworkMark.Core.Extentions.StringExtensions.GetFirstPinyin(System.String)">
+            <summary> 
+            汉字转化为拼音首字母
+            </summary> 
+            <param name="str">汉字</param> 
+            <returns>首字母</returns> 
+        </member>
+        <member name="M:Amm.NetworkMark.Core.Extentions.StringExtensions.IsNullOrWhiteSpace(System.String)">
+            <summary>
+                指示指定的字符串是 null、空或者仅由空白字符组成。
+            </summary>
+        </member>
+        <member name="M:Amm.NetworkMark.Core.Extentions.StringExtensions.IsMissing(System.String)">
+            <summary>
+                指示指定的字符串是 null、空或者仅由空白字符组成。
+            </summary>
+        </member>
+        <member name="M:Amm.NetworkMark.Core.Extentions.StringExtensions.FormatWith(System.String,System.Object[])">
+            <summary>
+                为指定格式的字符串填充相应对象来生成字符串
+            </summary>
+            <param name="format">字符串格式，占位符以{n}表示</param>
+            <param name="args">用于填充占位符的参数</param>
+            <returns>格式化后的字符串</returns>
+        </member>
+        <member name="M:Amm.NetworkMark.Core.Extentions.StringExtensions.ReverseString(System.String)">
+            <summary>
+                将字符串反转
+            </summary>
+            <param name="value">要反转的字符串</param>
+        </member>
+        <member name="M:Amm.NetworkMark.Core.Extentions.StringExtensions.IsImageFile(System.String)">
+            <summary>
+                判断指定路径是否图片文件
+            </summary>
+        </member>
+        <member name="M:Amm.NetworkMark.Core.Extentions.StringExtensions.Split(System.String,System.String,System.Boolean)">
+            <summary>
+                以指定字符串作为分隔符将指定字符串分隔成数组
+            </summary>
+            <param name="value">要分割的字符串</param>
+            <param name="strSplit">字符串类型的分隔符</param>
+            <param name="removeEmptyEntries">是否移除数据中元素为空字符串的项</param>
+            <returns>分割后的数据</returns>
+        </member>
+        <member name="M:Amm.NetworkMark.Core.Extentions.StringExtensions.TextLength(System.String)">
+            <summary>
+                支持汉字的字符串长度，汉字长度计为2
+            </summary>
+            <param name="value">参数字符串</param>
+            <returns>当前字符串的长度，汉字长度为2</returns>
+        </member>
+        <member name="M:Amm.NetworkMark.Core.Extentions.StringExtensions.FromJsonString``1(System.String)">
+            <summary>
+                将JSON字符串还原为对象
+            </summary>
+            <typeparam name="T">要转换的目标类型</typeparam>
+            <param name="json">JSON字符串 </param>
+            <returns></returns>
+        </member>
+        <member name="M:Amm.NetworkMark.Core.Extentions.StringExtensions.FromJsonString(System.String,System.Type)">
+            <summary>
+                将JSON字符串还原为对象
+            </summary>
+            <param name="json">JSON字符串 </param>
+            <param name="type">数据类型</param>
+        </member>
+        <member name="M:Amm.NetworkMark.Core.Extentions.StringExtensions.AddUrlQuery(System.String,System.String[])">
+            <summary>
+                给URL添加查询参数
+            </summary>
+            <param name="url">URL字符串</param>
+            <param name="queries">要添加的参数，形如："id=1,cid=2"</param>
+            <returns></returns>
+        </member>
+        <member name="M:Amm.NetworkMark.Core.Extentions.StringExtensions.GetUrlQuery(System.String,System.String)">
+            <summary>
+                获取URL中指定参数的值，不存在返回空字符串
+            </summary>
+        </member>
+        <member name="M:Amm.NetworkMark.Core.Extentions.StringExtensions.AddHashFragment(System.String,System.String)">
+            <summary>
+                给URL添加 # 参数
+            </summary>
+            <param name="url">URL字符串</param>
+            <param name="query">要添加的参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Amm.NetworkMark.Core.Extentions.StringExtensions.ToBytes(System.String,System.Text.Encoding)">
+            <summary>
+                将字符串转换为<see cref="T:System.Byte" />[]数组，默认编码为<see cref="P:System.Text.Encoding.UTF8" />
+            </summary>
+        </member>
+        <member name="M:Amm.NetworkMark.Core.Extentions.StringExtensions.ToString2(System.Byte[],System.Text.Encoding)">
+            <summary>
+                将<see cref="T:System.Byte" />[]数组转换为字符串，默认编码为<see cref="P:System.Text.Encoding.UTF8" />
+            </summary>
+        </member>
+        <member name="M:Amm.NetworkMark.Core.Extentions.StringExtensions.ToBase64String(System.Byte[])">
+            <summary>
+                将<see cref="T:System.Byte" />[]数组转换为Base64字符串
+            </summary>
+        </member>
+        <member name="M:Amm.NetworkMark.Core.Extentions.StringExtensions.ToBase64String(System.String,System.Text.Encoding)">
+            <summary>
+                将字符串转换为Base64字符串，默认编码为<see cref="P:System.Text.Encoding.UTF8" />
+            </summary>
+            <param name="source">正常的字符串</param>
+            <param name="encoding">编码</param>
+            <returns>Base64字符串</returns>
+        </member>
+        <member name="M:Amm.NetworkMark.Core.Extentions.StringExtensions.FromBase64String(System.String,System.Text.Encoding)">
+            <summary>
+                将Base64字符串转换为正常字符串，默认编码为<see cref="P:System.Text.Encoding.UTF8" />
+            </summary>
+            <param name="base64String">Base64字符串</param>
+            <param name="encoding">编码</param>
+            <returns>正常字符串</returns>
+        </member>
+        <member name="M:Amm.NetworkMark.Core.Extentions.StringExtensions.ToUrlDecode(System.String)">
+            <summary>
+                将字符串进行UrlDecode解码
+            </summary>
+            <param name="source">待UrlDecode解码的字符串</param>
+            <returns>UrlDecode解码后的字符串</returns>
+        </member>
+        <member name="M:Amm.NetworkMark.Core.Extentions.StringExtensions.ToUrlEncode(System.String)">
+            <summary>
+                将字符串进行UrlEncode编码
+            </summary>
+            <param name="source">待UrlEncode编码的字符串</param>
+            <returns>UrlEncode编码后的字符串</returns>
+        </member>
+        <member name="M:Amm.NetworkMark.Core.Extentions.StringExtensions.ToHtmlDecode(System.String)">
+            <summary>
+                将字符串进行HtmlDecode解码
+            </summary>
+            <param name="source">待HtmlDecode解码的字符串</param>
+            <returns>HtmlDecode解码后的字符串</returns>
+        </member>
+        <member name="M:Amm.NetworkMark.Core.Extentions.StringExtensions.ToHtmlEncode(System.String)">
+            <summary>
+                将字符串进行HtmlEncode编码
+            </summary>
+            <param name="source">待HtmlEncode编码的字符串</param>
+            <returns>HtmlEncode编码后的字符串</returns>
+        </member>
+        <member name="M:Amm.NetworkMark.Core.Extentions.StringExtensions.ToHexString(System.String,System.Text.Encoding)">
+            <summary>
+                将字符串转换为十六进制字符串，默认编码为<see cref="P:System.Text.Encoding.UTF8" />
+            </summary>
+        </member>
+        <member name="M:Amm.NetworkMark.Core.Extentions.StringExtensions.FromHexString(System.String,System.Text.Encoding)">
+            <summary>
+                将十六进制字符串转换为常规字符串，默认编码为<see cref="P:System.Text.Encoding.UTF8" />
+            </summary>
+        </member>
+        <member name="M:Amm.NetworkMark.Core.Extentions.StringExtensions.ToHexString(System.Byte[])">
+            <summary>
+                将byte[]编码为十六进制字符串
+            </summary>
+            <param name="bytes">byte[]数组</param>
+            <returns>十六进制字符串</returns>
+        </member>
+        <member name="M:Amm.NetworkMark.Core.Extentions.StringExtensions.ToHexBytes(System.String)">
+            <summary>
+                将十六进制字符串转换为byte[]
+            </summary>
+            <param name="hexString">十六进制字符串</param>
+            <returns>byte[]数组</returns>
+        </member>
+        <member name="M:Amm.NetworkMark.Core.Extentions.StringExtensions.ToUnicodeString(System.String)">
+            <summary>
+                将字符串进行Unicode编码，变成形如“\u7f16\u7801”的形式
+            </summary>
+            <param name="source">要进行编号的字符串</param>
+        </member>
+        <member name="M:Amm.NetworkMark.Core.Extentions.StringExtensions.FromUnicodeString(System.String)">
+            <summary>
+                将形如“\u7f16\u7801”的Unicode字符串解码
+            </summary>
+        </member>
+        <member name="M:Amm.NetworkMark.Core.Extentions.StringExtensions.UpperToLowerAndSplit(System.String)">
+            <summary>
+                将驼峰字符串按单词拆分并转换成小写，再以-分隔
+            </summary>
+            <param name="str">待转换的字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Amm.NetworkMark.Core.Extentions.StringExtensions.LowerFirstChar(System.String)">
+            <summary>
+                将驼峰字符串的第一个字符小写
+            </summary>
+        </member>
+        <member name="M:Amm.NetworkMark.Core.Extentions.StringExtensions.UpperFirstChar(System.String)">
+            <summary>
+                将小驼峰字符串的第一个字符大写
+            </summary>
+        </member>
+        <member name="M:Amm.NetworkMark.Core.Extentions.StringExtensions.LevenshteinDistance(System.String,System.String,System.Double@,System.Boolean)">
+            <summary>
+                计算当前字符串与指定字符串的编辑距离(相似度)
+            </summary>
+            <param name="source">源字符串</param>
+            <param name="target">目标字符串</param>
+            <param name="similarity">输出相似度</param>
+            <param name="ignoreCase">是否忽略大小写</param>
+            <returns>编辑距离</returns>
+        </member>
+        <member name="M:Amm.NetworkMark.Core.Extentions.StringExtensions.GetSimilarityWith(System.String,System.String,System.Boolean)">
+            <summary>
+                计算两个字符串的相似度，应用公式：相似度=kq*q/(kq*q+kr*r+ks*s)(kq>0,kr>=0,ka>=0)
+                其中，q是字符串1和字符串2中都存在的单词的总数，s是字符串1中存在，字符串2中不存在的单词总数，r是字符串2中存在，字符串1中不存在的单词总数.
+                kq,kr和ka分别是q,r,s的权重，根据实际的计算情况，我们设kq=2，kr=ks=1.
+            </summary>
+            <param name="source">源字符串</param>
+            <param name="target">目标字符串</param>
+            <param name="ignoreCase">是否忽略大小写</param>
+            <returns>字符串相似度</returns>
+        </member>
+        <member name="T:OSharp.Properties.Resources">
+            <summary>
+              一个强类型的资源类，用于查找本地化的字符串等。
+            </summary>
+        </member>
+        <member name="P:OSharp.Properties.Resources.ResourceManager">
+            <summary>
+              返回此类使用的缓存的 ResourceManager 实例。
+            </summary>
+        </member>
+        <member name="P:OSharp.Properties.Resources.Culture">
+            <summary>
+              使用此强类型资源类，为所有资源查找
+              重写当前线程的 CurrentUICulture 属性。
+            </summary>
+        </member>
+        <member name="P:OSharp.Properties.Resources.AnyRadixConvert_CharacterIsNotValid">
+            <summary>
+              查找类似 参数中的字符\&quot;{0}\&quot;不是 {1} 进制数的有效字符。 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:OSharp.Properties.Resources.AnyRadixConvert_Overflow">
+            <summary>
+              查找类似 0 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:OSharp.Properties.Resources.Caching_CacheNotInitialized">
+            <summary>
+              查找类似 缓存功能尚未初始化，未找到可用的 ICacheProvider 实现。 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:OSharp.Properties.Resources.ConfigFile_ItemKeyDefineRepeated">
+            <summary>
+              查找类似 标识为“{0}”的项重复定义 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:OSharp.Properties.Resources.ConfigFile_NameToTypeIsNull">
+            <summary>
+              查找类似 名称为“{0}”的类型不存在 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:OSharp.Properties.Resources.Context_BuildServicesFirst">
+            <summary>
+              查找类似 请先初始化依赖注入服务，再使用OSharpContext.IocRegisterServices属性 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:OSharp.Properties.Resources.DbContextInitializerConfig_InitializerNotExists">
+            <summary>
+              查找类似 上下文初始化类型“{0}”不存在 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:OSharp.Properties.Resources.Filter_GroupOperateError">
+            <summary>
+              查找类似 查询条件组中的操作类型错误，只能为And或者Or。 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:OSharp.Properties.Resources.Filter_RuleFieldInTypeNotFound">
+            <summary>
+              查找类似 指定的属性“{0}”在类型“{1}”中不存在。 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:OSharp.Properties.Resources.Ioc_CannotResolveService">
+            <summary>
+              查找类似 无法解析类型“{0}”的构造函数中类型为“{1}”的参数 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:OSharp.Properties.Resources.Ioc_FrameworkNotInitialized">
+            <summary>
+              查找类似 OSharp框架尚未初始化，请先初始化 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:OSharp.Properties.Resources.Ioc_ImplementationTypeNotFound">
+            <summary>
+              查找类似 类型“{0}”的实现类型无法找到 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:OSharp.Properties.Resources.Ioc_NoConstructorMatch">
+            <summary>
+              查找类似 类型“{0}”中找不到合适参数的构造函数 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:OSharp.Properties.Resources.Ioc_TryAddIndistinguishableTypeToEnumerable">
+            <summary>
+              查找类似 实现类型不能为“{0}”，因为该类型与注册为“{1}”的其他类型无法区分 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:OSharp.Properties.Resources.IocInitializerBase_TypeNotIRepositoryType">
+            <summary>
+              查找类似 类型“{0}”不是仓储接口“IRepository&lt;,&gt;”的派生类。 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:OSharp.Properties.Resources.IocInitializerBase_TypeNotIUnitOfWorkType">
+            <summary>
+              查找类似 类型“{0}”不是操作单元“IUnitOfWork”的派生类。 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:OSharp.Properties.Resources.Logging_CreateLogInstanceReturnNull">
+            <summary>
+              查找类似 创建名称为“{0}”的日志实例时“{1}”返回空实例。 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:OSharp.Properties.Resources.Map_MapperIsNull">
+            <summary>
+              查找类似 MapperExtensions.Mapper不能为空，请先设置值 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:OSharp.Properties.Resources.Mef_HttpContextItems_NotFoundRequestContainer">
+            <summary>
+              查找类似 当前Http上下文中不存在Request有效范围的Mef部件容器。 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:OSharp.Properties.Resources.ObjectExtensions_PropertyNameNotExistsInType">
+            <summary>
+              查找类似 指定对象中不存在名称为“{0}”的属性。 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:OSharp.Properties.Resources.ObjectExtensions_PropertyNameNotFixedType">
+            <summary>
+              查找类似 指定名称“{0}”的属性类型不是“{1}”。 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:OSharp.Properties.Resources.ParameterCheck_Between">
+            <summary>
+              查找类似 参数“{0}”的值必须在“{1}”与“{2}”之间。 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:OSharp.Properties.Resources.ParameterCheck_BetweenNotEqual">
+            <summary>
+              查找类似 参数“{0}”的值必须在“{1}”与“{2}”之间，且不能等于“{3}”。 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:OSharp.Properties.Resources.ParameterCheck_DirectoryNotExists">
+            <summary>
+              查找类似 指定的目录路径“{0}”不存在。 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:OSharp.Properties.Resources.ParameterCheck_FileNotExists">
+            <summary>
+              查找类似 指定的文件路径“{0}”不存在。 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:OSharp.Properties.Resources.ParameterCheck_NotEmpty_Guid">
+            <summary>
+              查找类似 参数“{0}”的值不能为Guid.Empty 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:OSharp.Properties.Resources.ParameterCheck_NotGreaterThan">
+            <summary>
+              查找类似 参数“{0}”的值必须大于“{1}”。 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:OSharp.Properties.Resources.ParameterCheck_NotGreaterThanOrEqual">
+            <summary>
+              查找类似 参数“{0}”的值必须大于或等于“{1}”。 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:OSharp.Properties.Resources.ParameterCheck_NotLessThan">
+            <summary>
+              查找类似 参数“{0}”的值必须小于“{1}”。 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:OSharp.Properties.Resources.ParameterCheck_NotLessThanOrEqual">
+            <summary>
+              查找类似 参数“{0}”的值必须小于或等于“{1}”。 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:OSharp.Properties.Resources.ParameterCheck_NotNull">
+            <summary>
+              查找类似 参数“{0}”不能为空引用。 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:OSharp.Properties.Resources.ParameterCheck_NotNullOrEmpty_Collection">
+            <summary>
+              查找类似 参数“{0}”不能为空引用或空集合。 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:OSharp.Properties.Resources.ParameterCheck_NotNullOrEmpty_String">
+            <summary>
+              查找类似 参数“{0}”不能为空引用或空字符串。 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:OSharp.Properties.Resources.QueryCacheExtensions_TypeNotEntityType">
+            <summary>
+              查找类似 类型“{0}”不是实体类型 的本地化字符串。
+            </summary>
+        </member>
+    </members>
+</doc>
